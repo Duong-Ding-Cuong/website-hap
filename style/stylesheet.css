@@ -27,10 +27,8 @@ button{
     flex-wrap: nowrap;
     background-color: #fffffd;
 }
-.navChild:first-child{
-    font-weight: bold;
-    font-size: 25px;
-    width: 180px;
+.navChild:first-child img{
+    height: 100%;
     align-items: flex-start;
 }
 .navChild:nth-child(2){
@@ -191,13 +189,13 @@ display: flex;
     left: 80px;
     bottom: 30%;
     border: 10px solid #e8ebee;
-    height: 40vh;
-    width: 400px;
+    height: 50vh;
+    width: 60vh;
 }
 .containerItem-Text >p{
     color: white;
-    font-size: 40px;
-    line-height: 55px;
+    font-size: 2em;
+    line-height: 45px;
     margin-bottom: 5vh;
 }
 .containerItem-Text > button{
@@ -222,6 +220,7 @@ display: flex;
     font-size: 22px;
     margin-bottom: 40px;
     width: 100%;
+    line-height: 5vh;
 }
 .Item_child{
     display: flex;
@@ -231,7 +230,7 @@ display: flex;
     border: 1px solid #d6dadd;
     border-radius: 30px;
     gap: 20px;
-    width: 80%;
+    width: 90%;
 }
 .Item_child img{
     width: 140px;
@@ -347,6 +346,7 @@ display: flex;
     border-radius: 25px;
 }
 .container-projects-completed{
+    height: 100%;
     padding: 10vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("/website-hap/image/mau-van-phong-lam-viec-dep-02.jpg") center/cover no-repeat;
@@ -379,7 +379,7 @@ display: flex;
  }
 .card-projects-completed{
     padding: 30px;
-    width: 50vh;
+    width: 60vh;
     height:70vh ;
     display: grid;
 }
@@ -480,7 +480,7 @@ display: flex;
 }
 .containerChild-Foodter{
     display: grid;
-    grid-template-columns:3fr 3fr 1fr 1fr 1fr;
+    grid-template-columns:3fr 1fr 1fr 1fr 3fr;
     gap: 30px;
 }
 .icon-logo ul{
@@ -518,4 +518,3 @@ svg{
     margin: 10px 0;
     color: white;
 }
-
