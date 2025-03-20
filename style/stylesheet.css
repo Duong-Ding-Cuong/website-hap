@@ -65,7 +65,7 @@ button{
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('/website-hap/image/team-meeting-1024x708.jpg') no-repeat center center/cover;
-    padding-top: 100px;
+    padding-top: 18vh;
 }
 .bannerItem:nth-child(2)
 {
@@ -139,6 +139,7 @@ display: flex;
 .bannerItem-Child:nth-child(4),
 .bannerItem-Child:nth-child(6)
 {
+    margin-top: 15px;
     width: 350px;
     font-size: 20px;
 }
@@ -385,7 +386,7 @@ display: flex;
 }
 .card-child-projects-completed{
     background-color: white;
-    height: 30vh;
+    height: 35vh;
     padding: 30px;
     align-self: end;
     display: flex;
