@@ -29,6 +29,7 @@ button{
 }
 .navChild:first-child img{
     height: 100%;
+    width: 220px;
     align-items: flex-start;
 }
 .navChild:nth-child(2){
