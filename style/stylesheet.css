@@ -287,35 +287,48 @@ display: flex;
 .title-our-process{
     display: grid;
     row-gap: 15px;
-    margin-top: 80px;
+    padding-top: 80px;
+}
+.title-our-process span{
+    color: #f47a3d;
+}
+.title-our-process p:last-child{
+    width: 50%;
+    text-align: center;
+    margin: auto;
 }
 .list-img-our-process{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    padding: 0 17vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 15vh;
 }
 .card-process{
     display: flex;
     justify-content: center;
     position: relative;
+    margin-top: 60px;
+    box-shadow: 10px 10px 10px 10px #e8ebee;
+    /*border: 15px solid #e8ebee;*/
+    border-radius: 12%;
 }
 .card-process img{
-    width: 60%;
-    margin-top: 60px;
+    width: 100%;
+    height: 100%;
+    border-radius: 12%;
 }
-.card-process:nth-child(1),
-.card-process:nth-child(3){
-    position: relative;
-    top: 60px;
-}
+/*.card-process:nth-child(1),*/
+/*.card-process:nth-child(3){*/
+/*    position: relative;*/
+/*    top: 60px;*/
+/*}*/
 .number-card{
     background-color: #f03b02;
     width: 60px;
     height: 60px;
     position: absolute;
     top: 88%;
-    left: 55%;
+    left: 90%;
     text-align: center;
     color: white;
     font-weight: bold;
@@ -333,16 +346,11 @@ display: flex;
 .txt-card-process p:first-child{
     font-size: 30px;
 }
-.txt-card-process p:last-child{
-    width: 200px;
-    margin-top: 10px;
-}
+
 .containerChild-OUR-PROCESS{
-    height: 750px;
-    background-image: url(https://wp-themes.com/wp-content/themes/blockskit-digital-agency/assets/images/process-img5.png);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-color:#ffffff;
+    height: 100vh;
+    width: 100%;
 }
 .card{
     border-radius: 25px;
