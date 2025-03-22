@@ -22,6 +22,7 @@ button{
 }
 .component-nav{
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 1000;
 }
@@ -32,7 +33,6 @@ button{
     flex-wrap: nowrap;
     background-color: #fffffd;
 }
-
 .navChild:first-child img{
     height: 100%;
     width: 220px;
@@ -105,6 +105,7 @@ button{
     background-color: white;
 }
 .banner{
+    margin-top: 70px;
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('/website-hap/image/team-meeting-1024x708.jpg') no-repeat center center/cover;
