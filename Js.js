@@ -8,22 +8,54 @@ const toggle_Down = `
      <polyline points="10,20 25,40 40,20" stroke="black" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`;
 
-function toggleArrow(button) {
-    let arrow = button.querySelector(".arrow-icon"); // Lấy phần tử span trong nút được nhấn
-    if (!arrow) {
-        console.error("Không tìm thấy phần tử có class 'arrow-icon'");
+function toggleArrow(element, targetId) {
+    let listItem = element.closest(".main-menu"); // Lấy thẻ li cha
+    if (!listItem) return;
+
+    let arrow = listItem.querySelector(".arrow-icon");
+    let targetMenu = document.getElementById(targetId);
+
+    if (!arrow || !targetMenu) {
+        console.error(`Không tìm thấy '.arrow-icon' hoặc '#${targetId}'`);
         return;
     }
 
-    let isDown = arrow.getAttribute("data-state") === "down"; // Kiểm tra trạng thái hiện tại
-    arrow.innerHTML = isDown ? toggle_Up : toggle_Down; // Đổi mũi tên
-    arrow.setAttribute("data-state", isDown ? "up" : "down"); // Cập nhật trạng thái
+    let isCurrentlyDown = arrow.getAttribute("data-state") === "down";
+
+    // Reset tất cả các menu khác
+    document.querySelectorAll(".arrow-icon").forEach(otherArrow => {
+        if (otherArrow !== arrow) {
+            otherArrow.innerHTML = toggle_Up;
+            otherArrow.setAttribute("data-state", "up");
+        }
+    });
+
+    document.querySelectorAll(".container-subnav > .subnav-row").forEach(subnav => {
+        if (subnav !== targetMenu) {
+            subnav.style.display = "none";
+        }
+    });
+
+    // Toggle trạng thái của menu hiện tại
+    if (isCurrentlyDown) {
+        arrow.innerHTML = toggle_Up;
+        arrow.setAttribute("data-state", "up");
+        targetMenu.style.display = "none";
+    } else {
+        arrow.innerHTML = toggle_Down;
+        arrow.setAttribute("data-state", "down");
+        targetMenu.style.display = "";
+    }
 }
 
-// Hiển thị mũi tên mặc định khi trang tải
+// Ẩn mặc định tất cả các menu khi tải trang
 document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".container-subnav > .subnav-row").forEach(subnav => {
+        subnav.style.display = "none";
+    });
+
     document.querySelectorAll(".arrow-icon").forEach(arrow => {
         arrow.innerHTML = toggle_Up;
-        arrow.setAttribute("data-state", "up"); // Đặt trạng thái ban đầu
+        arrow.setAttribute("data-state", "up");
     });
 });

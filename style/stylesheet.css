@@ -20,6 +20,11 @@ button{
 .view-sesion{
     height: 100vh;
 }
+.component-nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
 .nav{
     padding: 1vh;
     display: flex;
@@ -27,6 +32,7 @@ button{
     flex-wrap: nowrap;
     background-color: #fffffd;
 }
+
 .navChild:first-child img{
     height: 100%;
     width: 220px;
@@ -55,6 +61,42 @@ button{
     border-radius: 28px;
     color: white;
     font-size: 18px;
+}
+.main-menu{
+    position: relative;
+}
+.main-menu a:hover{
+    color: #f47a3d;
+}
+
+.sub-nav{
+    position: absolute;
+    display: block;
+    background-color: #ffffff;
+    width: 100%;
+}
+.subnav-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+.subnav-column{
+    margin-left: auto;
+    margin-right: auto;
+}
+.subnav-column a{
+    display: block;
+    padding: .5rem;
+}
+.leve-2{
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: black;
+    padding-right: 2rem;
+    position: relative;
 }
 .arrow{
     height: 15px;
@@ -300,7 +342,7 @@ display: flex;
 .list-img-our-process{
     padding: 0 17vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 15vh;
 }
 .card-process{
@@ -316,27 +358,6 @@ display: flex;
     width: 100%;
     height: 100%;
     border-radius: 12%;
-}
-/*.card-process:nth-child(1),*/
-/*.card-process:nth-child(3){*/
-/*    position: relative;*/
-/*    top: 60px;*/
-/*}*/
-.number-card{
-    background-color: #f03b02;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 88%;
-    left: 90%;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 22px;
-    border:6px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .txt-card-process{
     position: absolute;

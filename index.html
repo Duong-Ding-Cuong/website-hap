@@ -10,53 +10,128 @@
     <script src="Js.js"></script>
 </head>
 <body>
+<div class="component-nav">
 <div class="nav">
     <div class="navChild">
         <a href="index.html"><img src="image/Logo HAP.jpg" alt="logo"></a>
     </div>
     <div class="navChild">
         <ul class="navItems">
-                <li>
-                    <a href="">HOME</a>
-                    <button class="toggle arrow" onclick="toggleArrow(this)">
-                        <span class="arrow-icon"></span>
-                    </button>
-                </li>
-            <li>
-                <a href="">ABOUT</a>
-                <button class="toggle arrow" onclick="toggleArrow(this)">
+            <li class="main-menu">
+                <a href="#" onclick="toggleArrow(this, 'about'); return false;">ABOUT</a>
+                <button class="toggle arrow" onclick="toggleArrow(this, 'about')">
                     <span class="arrow-icon"></span>
                 </button>
             </li>
-            <li>
-            <a href="">SERVICES</a>
-                <button class="toggle arrow" onclick="toggleArrow(this)">
+
+            <li class="main-menu">
+                <a href="#" onclick="toggleArrow(this, 'services'); return false;">SERVICES</a>
+                <button class="toggle arrow" onclick="toggleArrow(this, 'services')">
                     <span class="arrow-icon"></span>
                 </button>
-        </li>
-        <li>
-            <a href="">INDUSTRIES</a>
-            <button class="toggle arrow" onclick="toggleArrow(this)">
-                <span class="arrow-icon"></span>
-            </button>
-        </li>
-        <li>
-            <a href="">CAREER</a>
-            <button class="toggle arrow" onclick="toggleArrow(this)">
-                <span class="arrow-icon"></span>
-            </button>
-        </li>
-        <li>
-            <a href="">CONTACT US</a>
-            <button class="toggle arrow" onclick="toggleArrow(this)">
-                <span class="arrow-icon"></span>
-            </button>
-        </li>
+            </li>
+
+            <li class="main-menu">
+                <a href="#" onclick="toggleArrow(this, 'industries'); return false;">INDUSTRIES</a>
+                <button class="toggle arrow" onclick="toggleArrow(this, 'industries')">
+                    <span class="arrow-icon"></span>
+                </button>
+            </li>
+
+            <li class="main-menu">
+                <a href="#" onclick="toggleArrow(this, 'career'); return false;">CAREER</a>
+                <button class="toggle arrow" onclick="toggleArrow(this, 'career')">
+                    <span class="arrow-icon"></span>
+                </button>
+            </li>
+
+            <li class="main-menu">
+                <a href="#" onclick="toggleArrow(this, 'contacts'); return false;">CONTACTS US</a>
+                <button class="toggle arrow" onclick="toggleArrow(this, 'contacts')">
+                    <span class="arrow-icon"></span>
+                </button>
+            </li>
+
+
         </ul>
     </div>
     <div class="navChild">
         <button class="btn-color-orange">Get Started</button>
     </div>
+</div>
+<div class="sub-nav" style="display: block;">
+    <div class="container-subnav">
+        <div class="subnav-row" id="about" style="display: none;">
+            <div class="subnav-column">
+                <a href="" class="leve-2">About Us</a>
+                <a href="" class="leve-2">Possibilities by Vietnam</a>
+                <a href="" class="leve-2">Our Leaders</a>
+                <a href="" class="leve-2">Partners and Alliances</a>
+            </div>
+            <div class="subnav-column">
+                <a href="" class="leve-2">Company History</a>
+                <a href="" class="leve-2">Sustainability</a>
+                <a href="" class="leve-2">Newsroom</a>
+                <a href="" class="leve-2">Client Testimonials</a>
+            </div>
+            <div class="subnav-column">
+                <a href="" class="leve-2">Case Studies</a>
+                <a href="" class="leve-2">Technology Blogs</a>
+            </div>
+        </div>
+        <div class="subnav-row" id="services" style="display: none;">
+            <div class="subnav-column">
+                <a href="" class="leve-2">SEO Standard Website Design</a>
+            </div>
+            <div class="subnav-column">
+                <a href="" class="leve-2">Exclusive Mobile App Design</a>
+            </div>
+            <div class="subnav-column">
+                <a href="" class="leve-2">Fast Hosting Service</a>
+            </div>
+        </div>
+        <div class="subnav-row" id="industries" style="display: none;">
+            <div class="subnav-column">
+                <a href="" class="leve-2">Automotive</a>
+                <a href="" class="leve-2">Manufacturing</a>
+                <a href="" class="leve-2">Banking, Finance & Insurance</a>
+            </div>
+            <div class="subnav-column">
+                <a href="" class="leve-2">Healthcare</a>
+                <a href="" class="leve-2">Logistics</a>
+                <a href="" class="leve-2">Retail</a>
+            </div>
+            <div class="subnav-column">
+                <a href="" class="leve-2">Energy & Utilities</a>
+                <a href="" class="leve-2">Aviation & Aerospace</a>
+                <a href="" class="leve-2">Media & Entertainment</a>
+            </div>
+        </div>
+        <div class="subnav-row" id="career" style="display: none;">
+            <div class="subnav-column">
+                <a href="" class="leve-2">Tech Insight </a>
+            </div>
+            <div class="subnav-column">
+                <a href="" class="leve-2">Jobs</a>
+            </div>
+            <div class="subnav-column">
+                <a href="" class="leve-2">Life at HAP</a>
+            </div>
+        </div>
+        <div class="subnav-row" id="contacts" style="display: none;">
+            <div class="subnav-column">
+                <a href="" class="leve-2">Our product support/service</a>
+                <a href="" class="leve-2">Partner with us</a>
+            </div>
+            <div class="subnav-column">
+                <a href="" class="leve-2">Career opportunities</a>
+            </div>
+            <div class="subnav-column">
+                <a href="" class="leve-2">Website feedback</a>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 <!--banner-->
     <div class="banner">
@@ -150,42 +225,45 @@
                 <div class="title-our-process title">
                     <p class="name-box txt-center">---- Beyond A Partner</p>
                     <p class="title txt-center"> <span>99+ partners</span> have trusted our services</p>
-                    <p class="txt txt-center">Committed to bringing you speed to success, scalability and proven quality of delivery, through a strong commitment to global compliance standards</p>
+                    <p class="txt txt-center">Committed to bringing you speed to success, scalability and proven quality
+                        of delivery, through a strong commitment to global compliance stan</p>
+                    <p class="txt txt-center">dards</p>
                 </div>
                 <div class="list-img-our-process">
                     <div class="card-process">
                         <img src="image/pizzaParadise.png" alt="">
-                        <p class="number-card circle-image" >01</p>
                         <div class="txt-card-process">
                             <p class="title txt-center ">Pizza Paradise</p>
                         </div>
                     </div>
                     <div class="card-process">
                         <img src="image/Hanerl.png" alt="">
-                        <p class="number-card circle-image" >02
                         <div class="txt-card-process">
                             <p class="title txt-center ">Hanel</p>
                         </div>
                     </div>
                     <div class="card-process">
                         <img src="image/Feedy.png" alt="">
-                        <p class="number-card circle-image" >02</p>
                         <div class="txt-card-process">
                             <p class="title txt-center ">Feedy</p>
                         </div>
                     </div>
                     <div class="card-process">
                         <img src="image/AMVGrup.png" alt="">
-                        <p class="number-card circle-image" >04</p>
                         <div class="txt-card-process">
                             <p class="title txt-center ">AMV Group</p>
                         </div>
                     </div>
                     <div class="card-process">
                         <img src="image/Welove.png" alt="">
-                        <p class="number-card circle-image" >05</p>
                         <div class="txt-card-process">
-                            <p class="title txt-center ">AMV Group</p>
+                            <p class="title txt-center ">WeLove</p>
+                        </div>
+                    </div>
+                    <div class="card-process">
+                        <img src="image/Sleakerland.png" alt="">
+                        <div class="txt-card-process">
+                            <p class="title txt-center ">SneakerLand</p>
                         </div>
                     </div>
                 </div>
