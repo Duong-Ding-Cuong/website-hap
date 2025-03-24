@@ -30,15 +30,19 @@ button{
     padding: 1vh;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     background-color: #fffffd;
+    align-items: center;
+    justify-content: center;
 }
 .navChild:first-child img{
     height: 100%;
-    width: 220px;
+    width: 200px;
     align-items: flex-start;
 }
 .navChild:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: auto;
     margin-right: 60px;
 }
@@ -49,11 +53,9 @@ button{
     list-style: none;
     gap: 30px;
     font-weight: bold;
-    padding: 22px;
     font-size: 18px;
 }
 .navChild:last-child > button{
-    margin-top: 5px;
     height: 50px;
     width: 160px;
     background-color:#f47a3d;
@@ -105,7 +107,7 @@ button{
     background-color: white;
 }
 .banner{
-    margin-top: 70px;
+    margin-top: 50px;
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('/website-hap/image/team-meeting-1024x708.jpg') no-repeat center center/cover;
@@ -196,7 +198,7 @@ display: flex;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 100px 0 50px 0;
+    padding: 80px 0 50px 0;
     height: 100%;
 }
 .containerItem-INTRODUCTION:first-child{
@@ -204,26 +206,28 @@ display: flex;
     grid-template-columns: 1fr 1fr;
     margin-right: 80px;
     width: 55%;
+    height: 100%;
 }
 .containerItem-INTRODUCTION:last-child{
     width: calc(45% - 80px);
 }
 .containerItem-Img:first-child{
-    width: 70%;
+    width: 60%;
     overflow: hidden;
     margin:30px 20px 0 auto;
 }
 .containerItem-Img:nth-child(2){
-    height: 500px;
-    width: 100%;
+    height: 100%;
+    width: 80%;
     border-radius: 25px;
     margin-left: auto;
     object-fit: cover;
+    margin-right: auto;
 }
 .containerItem-Img:last-child{
-    width: 60%;
+    width: 50%;
+    margin-left: 40%;
     margin-top: 30px;
-    margin-left: auto;
 }
 .txt-INTRODUCTION{
     display: flex;
@@ -232,15 +236,15 @@ display: flex;
     padding: 5vh;
     border-radius: 22px;
     position: relative;
-    left: 80px;
-    bottom: 30%;
+    left: 100px;
+    bottom: 45%;
     border: 10px solid #e8ebee;
-    height: 110%;
+    height: 100%;
     width: 100%;
 }
 .containerItem-Text >p{
     color: white;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bold;
     line-height: 1.3em;
 }
@@ -259,20 +263,20 @@ display: flex;
     font-size: 40px;
     line-height: 50px;
     width: 80%;
-    margin: 20px 0;
+    margin: 1.5vh 0;
 }
 .Item-Child-title:nth-child(2){
     color: #3f4c7c;
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 40px;
     width: 100%;
-    line-height: 5vh;
+    line-height: 4.5vh;
 }
 .Item_child{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 40px;
+    padding: 3vh;
     border: 1px solid #d6dadd;
     border-radius: 30px;
     gap: 20px;
@@ -280,27 +284,18 @@ display: flex;
     background-color: darkgray;
 }
 .Item_child img{
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
 }
+.containerItem-Child .Item_child:nth-child(2) p:first-of-type,
 .containerItem-Child .Item_child:nth-child(1) p:first-of-type {
     font-weight: bold;
-    font-size: 28px;
+    font-size: 1.6em;
     color: #1d243c;
 }
-.containerItem-Child .Item_child:nth-child(1) p:last-of-type {
-    font-size: 20px;
-    line-height: 25px;
-    color: #3f4c7c;
-    margin-top: 10px;
-}
-.containerItem-Child .Item_child:nth-child(2) p:first-of-type {
-    font-weight: bold;
-    font-size: 28px;
-    color: #1d243c;
-}
+.containerItem-Child .Item_child:nth-child(1) p:last-of-type,
 .containerItem-Child .Item_child:nth-child(2) p:last-of-type {
-    font-size: 20px;
+    font-size: 1.2em;
     line-height: 25px;
     color: #3f4c7c;
     margin-top: 10px;
@@ -370,7 +365,6 @@ display: flex;
     position: relative;
     margin-top: 60px;
     box-shadow: 10px 10px 10px 10px #e8ebee;
-    /*border: 15px solid #e8ebee;*/
     border-radius: 12%;
 }
 .card-process img{
@@ -526,7 +520,7 @@ display: flex;
 }
 .foodter{
     background-color: #050a1d;
-    padding: 60px 20px;
+    padding: 10vh 13vh;
     color: white;
 }
 .containerChild-Foodter{
@@ -591,7 +585,7 @@ svg{
     border-radius: 50%;
     color: white;
 }
-.img-chat button{
+.img-chat button {
     border: none;
     border-radius: 50%;
     background-color: inherit;
