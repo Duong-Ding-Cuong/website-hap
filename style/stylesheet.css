@@ -94,7 +94,7 @@ button{
     font-weight: 600;
     font-size: 1.2rem;
     line-height: 2rem;
-    color: black;
+    color: #676869;
     padding-right: 2rem;
     position: relative;
 }
@@ -229,7 +229,7 @@ display: flex;
     display: flex;
     flex-direction: column;
     background-color: #050a1d;
-    padding: 45px;
+    padding: 5vh;
     border-radius: 22px;
     position: relative;
     left: 80px;
@@ -240,9 +240,9 @@ display: flex;
 }
 .containerItem-Text >p{
     color: white;
-    font-size: 2em;
-    line-height: 45px;
-    margin-bottom: 5vh;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1.3em;
 }
 .containerItem-Text > button{
     margin-top: auto;
@@ -277,6 +277,7 @@ display: flex;
     border-radius: 30px;
     gap: 20px;
     width: 90%;
+    background-color: darkgray;
 }
 .Item_child img{
     width: 70%;
@@ -321,12 +322,28 @@ display: flex;
     font-size: 40px;
 }
 .name-box{
-    color: #f03b18;
-    font-size: 20px;
+    color: #f47a3d;
+    font-size: 25px;
+}
+.line-namebox {
     font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+}
+.line-namebox::before {
+    content: "";
+    width: 7vh;
+    height: 3px;
+    background-color: #f47a3d;
+    margin-right: 10px;
+    display: inline-block;
+
 }
 .txt-center{
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .title-our-process{
     display: grid;
@@ -367,9 +384,8 @@ display: flex;
     margin-top: 40px;
 }
 .txt-card-process p:first-child{
-    font-size: 30px;
+    font-size:1.5rem;
 }
-
 .containerChild-OUR-PROCESS{
     background-color:#ffffff;
     height: 100vh;
@@ -515,7 +531,7 @@ display: flex;
 }
 .containerChild-Foodter{
     display: grid;
-    grid-template-columns:3fr 1fr 1fr 1fr 3fr;
+    grid-template-columns:3fr 1fr 1fr 3fr;
     gap: 30px;
 }
 .icon-logo ul{
@@ -552,4 +568,31 @@ svg{
     font-size: 20px;
     margin: 10px 0;
     color: white;
+}
+.chat{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff6600;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+}
+.img-chat svg{
+    margin-top: 5px;
+    width: 60%;
+    border-radius: 50%;
+    color: white;
+}
+.img-chat button{
+    border: none;
+    border-radius: 50%;
+    background-color: inherit;
 }

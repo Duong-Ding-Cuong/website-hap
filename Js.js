@@ -59,3 +59,4 @@ document.addEventListener("DOMContentLoaded", function () {
         arrow.setAttribute("data-state", "up");
     });
 });
+
