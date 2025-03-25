@@ -7,16 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style/stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="Js.js"></script>
 </head>
 <body>
 <div class="component-nav">
-<div class="nav">
-    <div class="navChild">
+<div class="nav ">
+    <div class="navChild ms-0">
         <a href="index.html"><img src="image/Logo HAP.jpg" alt="logo"></a>
     </div>
-    <div class="navChild">
-        <ul class="navItems">
+    <div class="navChild ms-0 my-auto">
+        <ul class="navItems ">
             <li class="main-menu">
                 <a href="#" onclick="toggleArrow(this, 'about'); return false;">ABOUT</a>
                 <button class="toggle arrow" onclick="toggleArrow(this, 'about')">
@@ -52,8 +54,9 @@
 
         </ul>
     </div>
+
     <div class="navChild">
-        <button class="btn-color-orange">Get Started</button>
+        <button class="btn-color-orange ">Get Started</button>
     </div>
 </div>
 <div class="sub-nav" style="display: block;">
@@ -127,41 +130,63 @@
     <div class="banner">
         <div class="bannerChild">
             <p class="name-box txt-center line-namebox"> HAP TECH</p>
-            <h1 class="bannerItem txt-center">We Are A Comprehensive <br> Technology Enabler</h1>
-            <p class="bannerItem txt-center">
+            <h1 class="bannerItem txt-center fw-bold ">We Are A Comprehensive <br> Technology Enabler</h1>
+            <p class="bannerItem h4 txt-center ">
                 We Accelerate Breakthrough Business Transformation By Agility, Scalability And Artificial Intelligence
             </p>
             <div class="bannerBtn">
                 <button class="btnGetStart btn-color-orange ">Get Started Now</button>
-                <button class="btn">Learn More</button>
-            </div>
-            <div class="bannerItem">
-                <div class="bannerItem-Child">
-                    <a href=""><p>01.</p></a>
-                </div>
-                <div class="bannerItem-Child">
-                    <a href=""><p class="bannerItem-Child-title">SEO Standard Website Design</p></a>
-                    <a href=""><p>Html5, React</p></a>
-                </div>
-                <div class="bannerItem-Child">
-                    <a href=""><p>02.</p></a>
-                </div>
-                <div class="bannerItem-Child">
-                    <a href=""><p class="bannerItem-Child-title">Exclusive Mobile App Design</p></a>
-                    <a href=""> <p>Android,IOS</p></a>
-                </div>
-                <div class="bannerItem-Child">
-                    <a href=""><p>03.</p></a>
-                </div>
-                <div class="bannerItem-Child">
-                    <a href=""><p class="bannerItem-Child-title">Fast Hosting Service</p></a>
-                    <a href=""><p>Amazon , Google Cloud</p></a>
-                </div>
+                <button class="button">Learn More</button>
             </div>
         </div>
     </div>
 <!--container-->
-<div class="container">
+<div class="container-page">
+<!--    service company-->
+    <div class="service-company">
+        <div class="service-content">
+            <div class="service-content-child">
+                <p class="name-box line-namebox">OUR SERVICES</p>
+                <div class="service-content-child-title">
+                    <p class="title text-light mb-5" >Services We Offer</p>
+                </div>
+            </div>
+            <div class="service-content-child">
+                <div class="card card-service">
+                    <p class="fw-bold">WEBSITE DEVELOPMENT</p>
+                    <div class="number-card-service">
+                        <span class="text-light" >04</span>
+                    </div>
+                    <img class="icon-service" src="image/customer-service.png" alt="service">
+                    <p>Digital agency an high end test for business website work</p>
+                </div>
+                <div class="card card-service">
+                    <p class="fw-bold">WEBSITE DEVELOPMENT</p>
+                    <div class="number-card-service">
+                        <span class="text-light" >04</span>
+                    </div>
+                    <img class="icon-service" src="image/customer-service.png" alt="service">
+                    <p>Digital agency an high end test for business website work</p>
+                </div>
+                <div class="card card-service">
+                    <p class="fw-bold">WEBSITE DEVELOPMENT</p>
+                    <div class="number-card-service">
+                        <span class="text-light" >04</span>
+                    </div>
+                    <img class="icon-service" src="image/customer-service.png" alt="service">
+                    <p>Digital agency an high end test for business website work</p>
+                </div>
+                <div class="card card-service">
+                    <p class="fw-bold">WEBSITE DEVELOPMENT</p>
+                    <div class="number-card-service">
+                        <span class="text-light" >04</span>
+                    </div>
+                    <img class="icon-service" src="image/customer-service.png" alt="service">
+                    <p>Digital agency an high end test for business website work</p>
+                </div>
+            </div>
+        </div>
+    </div>
 <!--        INTRODUCTION        -->
         <div class="containerChild-INTRODUCTION ">
             <div class="view-sesion containerChild-INTRODUCTION">
@@ -210,7 +235,7 @@
         <div class="containerChild-OUR-PROCESS view-sesion">
             <div class="containerItem view-sesion">
                 <div class="title-our-process title">
-                    <p class="name-box txt-center line-namebox">Beyond A Partner</p>
+                    <p class="name-box txt-center line-namebox">BEYOND A PARTNER</p>
                     <p class="title txt-center"> <span>99+ partners</span> have trusted our services</p>
                     <p class="txt txt-center">Committed to bringing you speed to success, scalability and proven quality
                         of delivery, through a strong commitment to global compliance standards</p>
@@ -258,28 +283,28 @@
 <!--    PROJECTS COMPLETED      -->
     <div class="container-projects-completed view-sesion ">
         <div class="containerChild-projects-completed">
-        <p class="name-box line-namebox">PROJECTS COMPLETED</p>
             <div CLASS="title-projects-completed ">
-                <p class="title">Checkout Our Projects</p>
-                <button class="btn-color-orange">LEARN MORE</button>
+        <p class="name-box line-namebox">PROJECTS COMPLETED</p>
+            <button class="btn-color-orange">LEARN MORE</button>
             </div>
+                <p class="title text-light">Checkout Our Projects</p>
         </div>
         <div class="containerChild-projects-completed">
-            <div class="card-projects-completed card">
+            <div class="card-projects-completed ">
                 <div class="card-child-projects-completed card">
                     <p class="title">Business Plan & Policy Management</p>
                     <p class="txt">Nihil dolorum quaerat officia mi inventore eget exercitat.</p>
                     <a href="#" class="arrow-link">→</a>
                 </div>
             </div>
-            <div class="card-projects-completed card">
+            <div class="card-projects-completed ">
                 <div class="card-child-projects-completed card">
                     <p class="title">Business Plan & Policy Management</p>
                     <p class="txt">Nihil dolorum quaerat officia mi inventore eget exercitat.</p>
                     <a href="#" class="arrow-link">→</a>
                 </div>
             </div>
-            <div class="card-projects-completed card">
+            <div class="card-projects-completed ">
                 <div class="card-child-projects-completed card">
                     <p class="title">Business Plan & Policy Management</p>
                     <p class="txt">Nihil dolorum quaerat officia mi inventore eget exercitat.</p>
@@ -336,6 +361,12 @@
         </div>
         <div class="containerChild-testimonial">
             <button class="btn-color-orange">MORE REVIEWS</button>
+        </div>
+    </div>
+<!--    contact us-->
+    <div class="contact-us">
+        <div class="container-contact">
+
         </div>
     </div>
 <!--    foodter     -->

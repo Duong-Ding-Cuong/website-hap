@@ -4,18 +4,15 @@
     box-sizing: border-box;
 }
 body{
-    font-family: "Poppins", sans-serif;
+    font-family: outfit, sans-serif !important;
 }
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+    text-decoration: none !important;
+    color: inherit !important;
 }
 ul li{
     list-style: none;
     color: #323f55;
-}
-button{
-    cursor: pointer;
 }
 .view-sesion{
     height: 100vh;
@@ -32,7 +29,6 @@ button{
     flex-direction: row;
     background-color: #fffffd;
     align-items: center;
-    justify-content: center;
 }
 .navChild:first-child img{
     height: 100%;
@@ -43,8 +39,10 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
     margin-right: 60px;
+}
+.navChild:last-child{
+    margin-left: auto;
 }
 .navItems{
     display: flex;
@@ -54,6 +52,8 @@ button{
     gap: 30px;
     font-weight: bold;
     font-size: 18px;
+    width: 100%;
+    margin:0;
 }
 .navChild:last-child > button{
     height: 50px;
@@ -108,50 +108,35 @@ button{
 }
 .banner{
     margin-top: 50px;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url('/website-hap/image/team-meeting-1024x708.jpg') no-repeat center center/cover;
-    padding-top: 18vh;
-}
-.bannerItem:nth-child(2)
-{
-    font-weight: bold;
-    color: white;
-    font-size: 80px;
-    margin: 30px auto;
-}
-.bannerItem:nth-child(3){
-    margin: 30px auto;
-    font-size: 18px;
-    line-height:25px ;
+    padding-top: 20vh;
     color: white;
 }
 .bannerBtn{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: center;
     gap: 20px;
-    padding: 40px 0 120px 0;
+    margin-top: 40px;
 }
 .btnGetStart{
     width: 200px;
 }
-.btn{
+.btn-color-orange,
+.button{
     height: 60px;
     min-width: 160px;
     border-radius: 28px;
     background-color: #ffffff;
     border: none;
     font-size: 18px;
+    font-weight: bold;
 }
 .btn-color-orange{
-    height: 60px;
-    width: 160px;
-    border-radius: 28px;
     background-color: #f47a3d;
     border: none;
-    font-size: 18px;
     color: white;
 }
 .btnGetStart:hover,
@@ -161,37 +146,11 @@ button{
 {
     background-color: #4B2ECB;
 }
-.bannerItem:last-child{
-display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 20px;
-    color: white;
-    justify-content: space-evenly;
-    padding:80px 0 50px 0;
-    margin: 0 20px;
-    border-top:2px solid #9ca3af;
-}
-.bannerItem-Child:first-child,
-    .bannerItem-Child:nth-child(3),
-    .bannerItem-Child:nth-child(5)
-{
+.bannerChild h1{
+    color: #FFFFFF;
     font-size: 80px;
-    font-weight: bold;
-    color: #9ca3af;
-    margin-left: 30px;
-}
-.bannerItem-Child:nth-child(2),
-.bannerItem-Child:nth-child(4),
-.bannerItem-Child:nth-child(6)
-{
-    margin-top: 15px;
-    width: 350px;
-    font-size: 20px;
-}
-.bannerItem-Child-title{
-    font-weight: bold;
-    padding-bottom: 10px;
+    line-height: 1em;
+    margin: 35px 0;
 }
 .containerChild-INTRODUCTION .view-sesion{
     background-color: #e8ebee;
@@ -250,7 +209,7 @@ display: flex;
     margin-bottom: 3vh;
 }
 .containerItem-Text > button{
-    margin-top: auto;
+    width: 50%;
 }
 .containerItem:nth-child(2)>p{
     color: red;
@@ -382,12 +341,10 @@ display: flex;
 }
 .containerChild-OUR-PROCESS{
     background-color:#ffffff;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
 }
-.card{
-    border-radius: 25px;
-}
+
 .container-projects-completed{
     height: 100%;
     padding: 10vh;
@@ -399,10 +356,6 @@ display: flex;
     display: flex;
     justify-content: space-between;
     margin-top: 18px;
-}
-
-.title-projects-completed p{
-    color: white;
 }
 .containerChild-projects-completed:nth-child(2){
     display: flex;
@@ -422,6 +375,7 @@ display: flex;
      background:url("/website-hap/image/card-project-completed.jpg") center/cover no-repeat;
  }
 .card-projects-completed{
+    border-radius: 25px;
     padding: 30px;
     width: 60vh;
     height:70vh ;
@@ -434,6 +388,7 @@ display: flex;
     align-self: end;
     display: flex;
     flex-direction: column;
+    border-radius: 25px;
 }
 .arrow-link {
     margin-top: auto;
@@ -456,24 +411,23 @@ display: flex;
 }
 .containerChild-testimonial:first-child{
     display: grid;
-    gap: 30px;
-    width: 600px;
+    width: 50%;
     justify-self: center;
 }
 .containerChild-testimonial:nth-child(2){
-display: flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 40px;
     justify-content: space-around;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 .card-testimonial{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     background-color: white;
-    padding: 60px;
+    padding: 60px 50px 30px 50px;
     border-radius: 30px;
     width: 40%;
 }
@@ -494,8 +448,8 @@ display: flex;
     position: relative;
 }
 .item-card-testimonial:nth-child(2) .item-card-testimonial-child:first-child {
-    padding-bottom: 5vh;
-    margin-bottom: 5vh;
+    padding-bottom: 1vh;
+    margin-bottom: 1vh;
     border-bottom:1px solid #d6dadd;
 }
 .item-card-testimonial:nth-child(2) .item-card-testimonial-child:nth-child(2) img{
@@ -589,4 +543,63 @@ svg{
     border: none;
     border-radius: 50%;
     background-color: inherit;
+}
+.service-company{
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('/website-hap/image/bachgrow-sevice.png') no-repeat center center/cover;
+}
+.service-content{
+    margin: auto;
+    width: 80%;
+    padding: 10vh 0;
+}
+.service-content-child:last-child{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap: 2em;
+}
+.card-service{
+    padding: 2em;
+    height: 45vh !important;
+    position: relative;
+    z-index: 1;
+    border-style: none !important;
+}
+.card-service:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #323f55;
+    color: white;
+    z-index: -1;
+    transition: width 0.25s;
+    border-radius:6px ;
+}
+.card-service:hover:before{
+    width: 100%;
+}
+.number-card-service {
+    border-bottom: 2px solid #2f2f2f;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 25px;
+}
+.number-card-service span {
+    background-color: #2f2f2f;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+.icon-service{
+    width: 65px;
+    height: 65px;
+    margin-bottom: 25px;
 }
