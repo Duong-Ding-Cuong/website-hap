@@ -241,7 +241,7 @@ ul li{
     border-radius: 30px;
     gap: 20px;
     width: 90%;
-    background-color: darkgray;
+    background-color: black;
 }
 .Item_child img{
     width: 35%;
@@ -512,6 +512,9 @@ svg{
     line-height: 2em;
     font-weight: bold;
 }
+.child-foodter ul{
+    padding:0 !important;
+}
 .child-foodter li{
     font-size: 20px;
     margin: 10px 0;
@@ -567,6 +570,10 @@ svg{
     z-index: 1;
     border-style: none !important;
 }
+.card-service:hover {
+    color: white !important; /* Thay đổi màu chữ */
+}
+
 .card-service:before{
     content: "";
     position: absolute;
@@ -574,14 +581,14 @@ svg{
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #323f55;
-    color: white;
+    background-color: #f47a3d;
     z-index: -1;
     transition: width 0.25s;
     border-radius:6px ;
 }
 .card-service:hover:before{
     width: 100%;
+    color: white ;
 }
 .number-card-service {
     border-bottom: 2px solid #2f2f2f;
