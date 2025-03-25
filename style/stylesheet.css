@@ -24,7 +24,7 @@ ul li{
     z-index: 1000;
 }
 .nav{
-    padding: 1vh;
+    padding: 1vh 2vh;
     display: flex;
     flex-direction: row;
     background-color: #fffffd;
@@ -39,10 +39,6 @@ ul li{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 60px;
-}
-.navChild:last-child{
-    margin-left: auto;
 }
 .navItems{
     display: flex;
@@ -55,9 +51,21 @@ ul li{
     width: 100%;
     margin:0;
 }
+.nav-iconsearch{
+    width: 2em;
+    margin-left: auto;
+    margin-right: 2%;
+}
+.nav-iconsearch img{
+    width: 2em;
+    height: 2em;
+}
+.navChild:last-child{
+     width: 160px;
+ }
 .navChild:last-child > button{
     height: 50px;
-    width: 160px;
+    width: 100%;
     background-color:#f47a3d;
     border: none;
     border-radius: 28px;
@@ -141,7 +149,7 @@ ul li{
 }
 .btnGetStart:hover,
 .btn-color-orange:hover,
-.btn:hover,
+.button:hover,
 .navChild:last-child > button:hover
 {
     background-color: #4B2ECB;
@@ -473,9 +481,12 @@ ul li{
     margin-top: 60px;
 }
 .foodter{
-    background-color: #050a1d;
-    padding: 10vh 13vh;
+    background-color:  #1b1a1d;
+    padding: 10vh 13vh 0 13vh;
     color: white;
+    background-image: url("https://demo.sandamedia.net/sotech/wp-content/uploads/2024/05/bg-footer-right.webp");
+    background-position: bottom right;
+    background-repeat: no-repeat;
 }
 .containerChild-Foodter{
     display: grid;
@@ -500,8 +511,11 @@ svg{
     line-height: 2em;
 }
 .last-child-foodter{
-    margin-top: 30px;
     font-size: 20px;
+    padding: 36px 0 20px 0;
+    border-top: 1px solid #ffffff1A;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    background-color:  #f47a3d;
 }
 .child-foodter:nth-child(2) p,
 .child-foodter:nth-child(3) p,
@@ -519,33 +533,6 @@ svg{
     font-size: 20px;
     margin: 10px 0;
     color: white;
-}
-.chat{
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    width: 60px;
-    height: 60px;
-    background-color: #ff6600;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    cursor: pointer;
-    border: none;
-}
-.img-chat svg{
-    margin-top: 5px;
-    width: 60%;
-    border-radius: 50%;
-    color: white;
-}
-.img-chat button {
-    border: none;
-    border-radius: 50%;
-    background-color: inherit;
 }
 .service-company{
     width: 100%;
