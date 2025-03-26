@@ -15,11 +15,9 @@ function toggleSubnav(targetId) {
     // Toggle trạng thái của menu hiện tại
     targetMenu.style.display = isCurrentlyVisible ? "none" : "";
 }
-
 // Ẩn tất cả menu khi tải trang
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".container-subnav > .subnav-row").forEach(subnav => {
         subnav.style.display = "none";
     });
 });
-
