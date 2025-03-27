@@ -12,7 +12,7 @@ a {
 }
 ul li{
     list-style: none;
-    color: #323f55;
+    color: orangered;
 }
 .view-sesion{
     height: 100vh;
@@ -53,7 +53,7 @@ ul li{
     font-size: 18px;
     width: 100%;
     margin:0;
-}
+1}
 .nav-iconsearch{
     width: 2em;
     margin-left: auto;
@@ -163,22 +163,31 @@ ul li{
     margin: 35px 0;
 }
 .containerChild-INTRODUCTION .view-sesion{
-    background-color: #e8ebee;
+    background-image: url("/website-hap/image/nen.png");
     display: flex;
+    background-size:cover;
+    background-position-y: 50%;
     flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 80px 0 50px 0;
+    padding: 80px 8% 50px 8%;
     height: 100%;
 }
 .containerItem-INTRODUCTION:first-child{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-right: 80px;
-    width: 55%;
+    margin-right: 20px;
+    width: 50%;
     height: 100%;
 }
+.containerItem-INTRODUCTION:last-child p:nth-child(3),
+.containerItem-INTRODUCTION:last-child p:nth-child(6){
+    color: #f47a3d;
+}
+.containerItem-INTRODUCTION:last-child p:nth-child(2),
+.containerItem-INTRODUCTION:last-child p:nth-child(4){
+    width: 80%;
+}
 .containerItem-INTRODUCTION:last-child{
-    width: calc(45% - 80px);
+    width: calc(50% - 20px);
 }
 .containerItem-Img:first-child{
     width: 60%;
@@ -202,18 +211,18 @@ ul li{
     display: flex;
     flex-direction: column;
     background-color: #050a1d;
-    padding: 6vh;
+    padding: 4vh;
     border-radius: 22px;
     position: relative;
     left: 120px;
-    bottom: 30%;
+    bottom: 25%;
     border: 10px solid #e8ebee;
     height: 100%;
     width: 100%;
 }
 .containerItem-Text >p{
     color: white;
-    font-size: 5vh;
+    font-size: 4vh;
     font-weight: bold;
     line-height: 1.3em;
     margin-bottom: 3vh;
@@ -221,57 +230,9 @@ ul li{
 .containerItem-Text > button{
     width: 50%;
 }
-.containerItem:nth-child(2)>p{
-    color: red;
-    font-weight: bold;
-    font-size: 20px;
-    padding-top: 20px;
-}
-.Item-Child-title:first-child{
-    color: #1d243c;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 50px;
-    width: 80%;
-    margin: 1.5vh 0;
-}
-.Item-Child-title:nth-child(2){
-    color: #3f4c7c;
-    font-size: 18px;
-    margin-bottom: 4vh;
-    width: 100%;
-    line-height: 4vh;
-}
-.Item_child{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 3vh;
-    border: 1px solid #d6dadd;
-    border-radius: 30px;
-    gap: 20px;
-    width: 90%;
-    background-color: black;
-}
-.Item_child img{
-    width: 35%;
-    height: 35%;
-}
-.containerItem-Child .Item_child:nth-child(2) p:first-of-type,
-.containerItem-Child .Item_child:nth-child(1) p:first-of-type {
-    font-weight: bold;
-    font-size: 1.4em;
-    color: #1d243c;
-}
-.containerItem-Child .Item_child:nth-child(1) p:last-of-type,
-.containerItem-Child .Item_child:nth-child(2) p:last-of-type {
-    font-size: 1.1em;
-    line-height: 25px;
-    color: #3f4c7c;
-    margin-top: 10px;
-}
-.containerItem-Child .Item_child:nth-child(2){
-    margin-top: 20px;
+
+.containerItem-INTRODUCTION:nth-child(2){
+
 }
 .circle-image {
     border-radius: 50%;
@@ -352,7 +313,7 @@ ul li{
 }
 .containerChild-OUR-PROCESS{
     background-color:#ffffff;
-    height: 94vh;
+    height: 100vh;
     width: 100%;
 }
 /*footer*/
