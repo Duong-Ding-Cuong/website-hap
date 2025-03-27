@@ -12,14 +12,10 @@ a {
 }
 ul li{
     list-style: none;
-    color: orangered;
+    color: #2d2d2d;
 }
 .view-sesion{
     height: 100vh;
-}
-.container-flex{
-    display: flex;
-    flex-direction: row;
 }
 .component-nav{
     top: 0;
@@ -53,7 +49,7 @@ ul li{
     font-size: 18px;
     width: 100%;
     margin:0;
-1}
+}
 .nav-iconsearch{
     width: 2em;
     margin-left: auto;
@@ -389,65 +385,70 @@ svg{
 /*service*/
 .service-company{
     width: 100%;
-    height: 90vh;
+    height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url('/website-hap/image/bachgrow-sevice.png') no-repeat center center/cover;
+    background-position-y:0;
 }
 .service-content{
     margin: auto;
     width: 80%;
     padding: 10vh 0;
+    height: 100%;
 }
 .service-content-child:last-child{
     display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
-    gap: 2em;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 5em;
+    height: 100%;
+}
+.service-content-child-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .card-service{
     padding: 2em;
-    height: 45vh !important;
+    height: 100% !important;
     position: relative;
     z-index: 1;
     border-style: none !important;
 }
-.card-service:hover {
-    color: white !important;
-}
-.card-service:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #f47a3d;
-    z-index: -1;
-    transition: width 0.3s;
-    border-radius:6px ;
-}
-.card-service:hover:before{
-    width: 100%;
-    color: white ;
-}
-.number-card-service {
-    border-bottom: 2px solid #2f2f2f;
+.item-card-service{
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.number-card-service span {
-    background-color: #2f2f2f;
-    width: 35px;
-    height: 35px;
+.item-card-service ul{
+    padding-left: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
 }
-.icon-service{
-    width: 65px;
-    height: 65px;
-    margin-bottom: 25px;
+.item-card-service ul li{
+    line-height: 35px;
+}
+.item-card-service h3{
+    background: #f47a3d;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 24px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    width: calc(100% + 100px);
+    text-align: center;
+}
+.btn-service-company {
+    border: 2px solid white;
+    border-radius: 28px;
+}
+.btn-service{
+    background-color: #0b0400;
 }
 /*contact us*/
 .contact-us{
