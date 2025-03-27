@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: outfit, sans-serif !important;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 a {
     text-decoration: none !important;
@@ -366,25 +366,19 @@ ul li{
 }
 .containerChild-Foodter{
     display: grid;
-    grid-template-columns:3fr 1fr 1fr 3fr;
+    grid-template-columns:2fr 1fr 1fr 2fr;
     gap: 30px;
+    margin-bottom: 10vh;
 }
 .icon-logo ul{
     display: flex;
     flex-direction: row;
     gap: 10px;
+    font-size:16px;
 }
 svg{
     fill: currentColor;
     color: #f03b01;
-}
-.child-foodter:first-child h3{
-    margin-top: 30px;
-}
-.child-foodter:first-child p{
-    margin: 20px 0;
-    font-size: 20px;
-    line-height: 2em;
 }
 .last-child-foodter{
     font-size: 20px;
@@ -395,19 +389,17 @@ svg{
 }
 .child-foodter:nth-child(2) p,
 .child-foodter:nth-child(3) p,
-.child-foodter:nth-child(4) p,
-.child-foodter:nth-child(5) p{
-    margin: 80px 0 20px 0;
+.child-foodter:nth-child(4) p{
+    margin: 0 0 20px 0;
     font-size: 20px;
     line-height: 2em;
     font-weight: bold;
-    border-bottom: #f47a3d 2px solid;
+    border-bottom: #1c272e 2px solid;
     position: relative;
 }
 .child-foodter:nth-child(2) p:before,
 .child-foodter:nth-child(3) p:before,
-.child-foodter:nth-child(4) p:before,
-.child-foodter:nth-child(5) p:before{
+.child-foodter:nth-child(4) p:before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -415,14 +407,21 @@ svg{
     right: 0;
     width: 55%;
     height: 2px;
-    border-bottom: white 2px solid;
+    border-bottom: #f47a3d 2px solid;
     transform: translateY(96%);
+}
+.child-foodter:nth-child(4) img{
+    width: 100%;
+    height: 10vh;
+    object-fit: cover;
 }
 .child-foodter ul{
     padding:0 !important;
 }
-.child-foodter li{
-    font-size: 20px;
+.child-foodter li,
+.child-foodter:nth-child(1) p
+{
+    font-size: 16px;
     margin: 10px 0;
     color: white;
 }
