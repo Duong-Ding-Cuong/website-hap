@@ -330,7 +330,6 @@ svg{
 }
 .icon-service {
     width: 50%;
-    height: 100%;
     margin-bottom: 25px;
 }
 /*contact us*/
@@ -513,89 +512,4 @@ svg{
 }
 .banner-content-child-button button{
     width: 200px;
-}
-/*from the blog*/
-.blog-company{
-    padding: 5vh 0;
-    height: 100%;
-}
-.blog-company-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 4em;
-    padding: 0 14%;
-    height: 100%;
-}
-.blog-company-card-child{
-    border: 1px solid #f4f5f8;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-.blog-company-itemcard-img{
-    width: 100%;
-    height: 250px;
-}
-.blog-company-itemcard-img img{
-    width: 100%;
-    height: 100%;
-}
-.blog-company-itemcard-icon{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2em;
-}
-.icon-itemcard-blog img{
-    width: 25px;
-    height: 25px;
-}
-.icon-itemcard-blog span{
-    font-size: 13px;
-}
-.blog-company-itemcard-title{
-    padding: 2em;
-}
-.blog-company-itemcard-last-title{
-    background-color: #f4f5f8;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
-    position: relative;
-    z-index: 1;
-}
-.icon-itemcard-blog{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-/* Tạo hiệu ứng nền màu cam khi hover */
-.blog-company-itemcard-last-title:before {
-    content: "";
-    position: absolute;
-    background: #f47a3d;
-    width: 100%;
-    height: 0;
-    bottom: 0;
-    left: 0;
-    transition: height 0.3s ease-in-out;
-    z-index: -1;
-}
-.blog-company-card-child:hover .blog-company-itemcard-last-title:before {
-    height: 100%; /* Chiều cao mở rộng khi hover */
-}
-.blog-company-itemcard-last-title:hover:before {
-    height: 100%;
-}
-.blog-company-card-child:hover .blog-company-itemcard-last-title,
-.blog-company-itemcard-last-title:hover {
-    color: white;
-    transition: color 0.3s ease-in-out; /* Hiệu ứng chuyển màu mượt */
-}
-.blog-company-itemcard-last-title img {
-    width: 15px;
-    height: 15px;
 }
