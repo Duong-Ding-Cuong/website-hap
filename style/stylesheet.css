@@ -77,42 +77,6 @@ ul li{
 .main-menu a:hover{
     color: #f47a3d;
 }
-
-.sub-nav{
-    position: absolute;
-    display: block;
-    background-color: #ffffff;
-    width: 100%;
-}
-.subnav-row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-}
-.subnav-column{
-    margin-left: auto;
-    margin-right: auto;
-}
-.subnav-column a{
-    display: block;
-    padding: .5rem;
-}
-.leve-2{
-    font-weight: 600;
-    font-size: 1.2rem;
-    line-height: 2rem;
-    color: #676869;
-    padding-right: 2rem;
-    position: relative;
-}
-.arrow{
-    height: 15px;
-    width: 15px;
-    border: none;
-    background-color: white;
-}
 .banner{
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -159,7 +123,7 @@ ul li{
     margin: 35px 0;
 }
 .containerChild-INTRODUCTION .view-sesion{
-    background-image: url("/website-hap/image/nen.png");
+    background-image: url("/website-hap/image/anhnen.png");
     display: flex;
     background-size:cover;
     background-position-y: 50%;
@@ -658,6 +622,9 @@ svg{
     height: 100%;
 }
 .blog-company-itemcard-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 2em;
 }
 .icon-itemcard-blog img{
