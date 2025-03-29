@@ -28,10 +28,10 @@ ul li{
 .nav{
     display: flex;
     flex-direction: row;
-    background-color: #fffffd;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding-left: 40px !important;
+    padding-right: 40px;
 }
 .navChild:first-child img{
     margin: 5px;
@@ -55,9 +55,19 @@ ul li{
     width: 100%;
     margin:0 110px 0 0;
 }
-.navChild:last-child{
-
+.navChild:last-child ul{
+    display: none;
  }
+.choose-language a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.choose-language a img:nth-child(2){
+    width: 1.2rem;
+    height: 1.2rem;
+}
 .navChild:last-child img{
     width: 35px;
     height: 35px;
@@ -486,7 +496,7 @@ svg{
 .item-slide-teammate:hover:before{
     height: 100%;
 }
-/*banner content*/
+/*banner content page*/
 .banner-content{
     overflow: hidden;
     width: 100%;
@@ -512,4 +522,66 @@ svg{
 }
 .banner-content-child-button button{
     width: 200px;
+}
+/*about us*/
+.about{
+
+    width: 100%;
+    height: 100%;
+    padding: 5em;
+    background: url("/website-hap/image/backgoud-aboutus.png") no-repeat top center/cover;");
+}
+.container-about{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-child{
+    width: 50%;
+    height: 100%;
+}
+.about-child-title{
+    border-bottom: 2px solid #f47a3d;
+    margin-bottom: 3rem;
+}
+.about-child-text{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items: flex-start;
+    height: 30vh;
+}
+.number-text-aboutchild{
+    width: 3rem;
+    height: 3rem;
+    background-color: #f47a3d;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+.content-text-aboutchild{
+    width: calc(100% - 5rem);
+    padding-right: 4rem;
+}
+.about-child:last-child{
+    width: calc(100% - 50%);
+    display: flex;
+    gap: 1rem;
+    height: 100%;
+
+}
+.about-child-img{
+    width: 100%;
+    height: 75vh;
+}
+.about-child-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-child-img:nth-child(2){
+    margin-top: 5rem;
 }
