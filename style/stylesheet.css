@@ -55,9 +55,41 @@ ul li{
     width: 100%;
     margin:0 110px 0 0;
 }
-.navChild:last-child ul{
+/*choose language start*/
+.show{
+    display: block !important;
+}
+.choose-language ul{
     display: none;
+    position: absolute;
+    top:55px;
+    right: 30px;
+    background-color: darkgray;
+    padding-left: 0;
+    border-radius: .25rem;
  }
+.choose-language li{
+    display: block;
+    padding: .75rem 2.5rem .75rem 1rem;
+    border-bottom: 1px solid white;
+}
+.choose-language li:last-child{
+    border-bottom: none;
+}
+.choose-language li:hover{
+    background-color: #f47a3d;
+    color: white;
+}
+.choose-language li:nth-child(1):hover{
+    border-radius:.25rem .25rem  0 0;
+}
+.choose-language li:last-child:hover{
+    border-radius: 0 0 .25rem .25rem ;
+}
+.choose-language li:nth-child(1):hover,
+.choose-language li:last-child:hover{
+
+}
 .choose-language a{
     position: relative;
     display: flex;
@@ -68,6 +100,7 @@ ul li{
     width: 1.2rem;
     height: 1.2rem;
 }
+/*choose language end*/
 .navChild:last-child img{
     width: 35px;
     height: 35px;
@@ -112,78 +145,6 @@ ul li{
     font-size: 80px;
     line-height: 1em;
     margin: 35px 0;
-}
-.containerChild-INTRODUCTION .view-sesion{
-    background-image: url("/website-hap/image/anhnen.png");
-    display: flex;
-    background-size:cover;
-    background-position-y: 50%;
-    flex-direction: row;
-    padding: 80px 8% 50px 8%;
-    height: 100%;
-}
-.containerItem-INTRODUCTION:first-child{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-right: 20px;
-    width: 50%;
-    height: 100%;
-}
-.containerItem-INTRODUCTION:last-child p:nth-child(3),
-.containerItem-INTRODUCTION:last-child p:nth-child(6){
-    color: #f47a3d;
-}
-.containerItem-INTRODUCTION:last-child p:nth-child(2),
-.containerItem-INTRODUCTION:last-child p:nth-child(4){
-    width: 80%;
-}
-.containerItem-INTRODUCTION:last-child{
-    width: calc(50% - 20px);
-}
-.containerItem-Img:first-child{
-    width: 60%;
-    overflow: hidden;
-    margin:30px 20px 0 auto;
-}
-.containerItem-Img:nth-child(2){
-    height: 100%;
-    width: 75%;
-    border-radius: 25px;
-    margin-left: auto;
-    object-fit: cover;
-    margin-right: auto;
-}
-.containerItem-Img:last-child{
-    width: 50%;
-    margin-left: 40%;
-    margin-top: 30px;
-}
-.txt-INTRODUCTION{
-    display: flex;
-    flex-direction: column;
-    background-color: #050a1d;
-    padding: 4vh;
-    border-radius: 22px;
-    position: relative;
-    left: 120px;
-    bottom: 25%;
-    border: 10px solid #e8ebee;
-    height: 100%;
-    width: 100%;
-}
-.containerItem-Text >p{
-    color: white;
-    font-size: 4vh;
-    font-weight: bold;
-    line-height: 1.3em;
-    margin-bottom: 3vh;
-}
-.containerItem-Text > button{
-    width: 50%;
-}
-
-.containerItem-INTRODUCTION:nth-child(2){
-
 }
 .circle-image {
     border-radius: 50%;
@@ -345,7 +306,7 @@ svg{
 /*contact us*/
 .contact-us{
     display: flex;
-    background-color: #f47a3d;
+    background-color: #2d2d2d;
     padding: 5em;
     color: white;
     height: 95vh;
@@ -585,3 +546,41 @@ svg{
 .about-child-img:nth-child(2){
     margin-top: 5rem;
 }
+/*<!--    Multiples contacts    -->*/
+#tool__society .tool__item {
+    bottom: 250px;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    width: 48px;
+    z-index: 1000;
+    color: white;
+}
+#tool__society .tool__item .tool__icon {
+    background-color: #f47a3d;
+    background-position: 16px center;
+    background-repeat: no-repeat;
+    border-radius: 30px 0 0 30px;
+    border: 2px solid #fff;
+    border-right: 0;
+    clear: both;
+    float: left;
+    font-style: normal;
+    height: 46px;
+    line-height: 46px;
+    margin-bottom: 12px;
+    padding-left: 100%;
+    transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, padding 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, margin 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, background-color 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    white-space: nowrap;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+#tool__society .tool__item .tool__icon:hover {
+    margin-left: 48px;
+    padding-left: 50px;
+    padding-right: 16px;
+    text-decoration: none;
+    transform: translateX(-100%);
+}
+/**/
