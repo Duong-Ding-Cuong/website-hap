@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .text-hap{
-    color: #f47a3d;
+    color: #f47a3d !important;
 }
 body{
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
@@ -252,45 +252,38 @@ svg{
     margin: 10px 0;
     color: white;
 }
-/*service*/
-.service-company{
+/*Why choose us*/
+.why-choose-company{
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url('/website-hap/image/bachgrow-sevice.png') no-repeat center center/cover;
     background-position-y:0;
 }
-.service-content{
+.why-choose-content{
     margin: auto;
     width: 80%;
     padding: 10vh 0;
     height: 100%;
 }
-.service-content-child:last-child{
+.why-choose-content-child:last-child{
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
     gap: 3em;
     height: 100%;
 }
-.service-content-child-title{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.card-service{
+.card-why-choose{
+    background-color: darkgray !important;
     padding: 2em;
     height: 45vh !important;
     position: relative;
     z-index: 1;
-    border-style: none !important;
     justify-content: space-around;
 }
-.number-card-service{
+.number-card-why-choose{
     display: flex;
     align-items:flex-end ;
     border-bottom: 2px solid rgb(47, 47, 47);
 }
-.number-card-service span {
+.number-card-why-choose span {
     background-color: rgb(47, 47, 47);
     width: 50px;
     height: 35px;
@@ -299,7 +292,7 @@ svg{
     align-items: center;
     margin-left: auto;
 }
-.icon-service {
+.icon-why-choose{
     width: 50%;
     margin-bottom: 25px;
 }
@@ -316,9 +309,6 @@ svg{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.content-contact-child > .line-namebox:before{
-    background-color: white;
 }
 .container-contact{
     width: 100%;
@@ -355,7 +345,7 @@ svg{
     width: 100%;
     height: 100%;
     border-radius: 25px;
-    box-shadow: 10px 10px 30px 10px #dbc09b;
+    box-shadow: 10px 10px 30px 10px #181817;
 }
 .form-contact-input{
     display: flex;
@@ -566,7 +556,7 @@ svg{
     clear: both;
     float: left;
     font-style: normal;
-    height: 46px;
+    height: 42px;
     line-height: 46px;
     margin-bottom: 12px;
     padding-left: 100%;
@@ -583,4 +573,119 @@ svg{
     text-decoration: none;
     transform: translateX(-100%);
 }
-/**/
+/*   TECH STACK   */
+.support-tech{
+    width: 100%;
+    height: 100%;
+    padding: 64px 112px;
+    display: flex;
+    justify-content: center;
+}
+.container-support{
+    max-width: 1290px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.item-list-tech{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-column-gap: 3px;
+    align-items: center;
+    margin-bottom: 16px;
+    height: 80px;
+    width: 100%;
+}
+.name-list-tech{
+    height: 100%;
+    background-color: #F6F7FC;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    transition: all 300ms ease 0ms;
+    min-height: 62px;
+}
+.name-list-tech img{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    transition: all 300ms ease 0ms;
+}
+.name-list-tech h3{
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 300ms ease 0ms;
+}
+.list-tech{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+.list-tech-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F7FC;
+    height: 80px;
+    margin: 0 2px;
+    padding: 20px;
+    filter: grayscale(1);
+    min-width: 120px;
+    max-width: 141px;
+}
+.item-list-tech:hover .name-list-tech,
+.item-list-tech:hover .list-tech-img{
+    background-color: #f47a3d;
+    filter: grayscale(0);
+}
+.item-list-tech:hover .list-tech-img{
+background-color: #f7b56b;
+}
+.item-list-tech:hover .list-tech-img{
+    min-width: 127px;
+}
+.item-list-tech:hover .name-list-tech img{
+    visibility: visible;
+    width: 35px;
+    height: 35px;
+    padding: 0.5rem;
+    background-color: white;
+}
+/*    service    */
+.service{
+    background: url("/website-hap/image/background-service.png") no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    padding: 65px 50px;
+}
+.title-container-service{
+    margin: auto;
+    width: 70%;
+    border-bottom: 2px solid white;
+}
+.item-container-service{
+    height: 100%;
+    width: calc(33.33% - 10px);
+}
+.content-container-service{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.img-container-service img{
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.text-service:last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
