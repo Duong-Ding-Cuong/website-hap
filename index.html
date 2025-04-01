@@ -11,60 +11,60 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="component-nav">
-<div class="nav ">
-    <div class="navChild ms-0">
-        <a href="index.html"><img src="image/Logo HAP.jpg" alt="logo"></a>
+    <div class="component-nav">
+        <nav class="nav" id="navbar">
+            <div class="navChild ms-0">
+                <a href="index.html"><img src="image/Logo HAP.jpg" alt="logo"></a>
+            </div>
+            <div class="navChild ms-0 my-auto">
+                <ul class="navItems">
+                    <li class="main-menu">
+                        <a href="#about" >About</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="#service">Services</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="#support-tech">Career</a>
+                    </li>
+                    <li class="main-menu">
+                        <a href="#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navChild choose-language">
+                <a href="javascript:void(0);" title="Language" onclick="changeLanguage()">
+                    <img src="image/icon-language.png" alt="language">
+                    EN
+                    <img src="image/down-arrow.png" alt="">
+                </a>
+                <ul id="language">
+                    <li>
+                        <a class="active" data-text="EN" href="" target="">Global (English)</a>
+                    </li>
+                    <li>
+                        <a class="" data-text="JP" href="" target="">Japan (日本語)</a>
+                    </li>
+                    <li>
+                        <a class="" data-text="KR" href="" target="_blank">Korea (한국어)</a>
+                    </li>
+                    <li>
+                        <a class="" data-text="FR" href="" target="_blank">France (Français)</a>
+                    </li>
+                    <li>
+                        <a class="" data-text="DE" href="" target="_blank">Germany (Deutsch)</a>
+                    </li>
+                    <li>
+                        <a class="" data-text="AME" href="" target="_blank">Americas (English)</a>
+                    </li>
+                    <li>
+                        <a class="" data-text="SG" href="" target="_blank">Singapore (English)</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
-    <div class="navChild ms-0 my-auto">
-        <ul class="navItems">
-            <li class="main-menu">
-                <a href="#" >About</a>
-            </li>
-            <li class="main-menu">
-                <a href="#">Services</a>
-            </li>
-            <li class="main-menu">
-                <a href="#">Career</a>
-            </li>
-            <li class="main-menu">
-                <a href="#">Contact Us</a>
-            </li>
-        </ul>
-    </div>
-    <div class="navChild choose-language">
-        <a href="javascript:void(0);" title="Language" onclick="changeLanguage()">
-            <img src="image/icon-language.png" alt="language">
-            EN
-            <img src="image/down-arrow.png" alt="">
-        </a>
-        <ul id="language">
-            <li>
-                <a class="active" data-text="EN" href="" target="">Global (English)</a>
-            </li>
-            <li>
-                <a class="" data-text="JP" href="" target="">Japan (日本語)</a>
-            </li>
-            <li>
-                <a class="" data-text="KR" href="" target="_blank">Korea (한국어)</a>
-            </li>
-            <li>
-                <a class="" data-text="FR" href="" target="_blank">France (Français)</a>
-            </li>
-            <li>
-                <a class="" data-text="DE" href="" target="_blank">Germany (Deutsch)</a>
-            </li>
-            <li>
-                <a class="" data-text="AME" href="" target="_blank">Americas (English)</a>
-            </li>
-            <li>
-                <a class="" data-text="SG" href="" target="_blank">Singapore (English)</a>
-            </li>
-        </ul>
-    </div>
-</div>
-</div>
-<!--banner-->
+<!--    banner  -->
     <div class="banner">
         <div class="bannerChild">
             <p class="name-box txt-center line-namebox"> HAP TECH</p>
@@ -74,10 +74,10 @@
             </p>
         </div>
     </div>
-<!--container-->
+<!--container page-->
 <div class="container-page">
-<!--About us-->
-    <div class="about">
+<!--    About us    -->
+    <section class="about" id="about" >
         <div class="container-about">
             <div class="about-child">
                 <div class="about-child-title">
@@ -107,9 +107,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 <!--    tech stack (Supported services and apps)  -->
-    <div class="support-tech">
+    <section  class="support-tech" id="support-tech">
         <div class="container-support">
             <div class="support-child">
                 <div class="support-child-title">
@@ -329,9 +329,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 <!--    our service     -->
-<section class="service">
+    <section class="service" id="service">
         <div class="container-service">
             <div class="title-container-service">
                 <h1 class="title text-light text-center" >Our <span class="title text-hap">Service</span></h1>
@@ -399,6 +399,37 @@
 
         </div>
     </div>
+<!--    Certifications (chứng chỉ)    -->
+    <section class="certifications">
+        <div class="certifications-title mb-4">
+            <h1 class="title text-hap line-namebox">Our Certifications</h1>
+        </div>
+        <div class="container-certifications">
+            <div class="item-container-certifications">
+                <div class="text-certifications">
+                    <h1 class="fw-bold mb-4">Certifications</h1>
+                    <p>A presentation is a formal talk, often delivered in front of an audience, aimed at conveying information, persuading others, or sharing insights on a particular topic. Presentations can take various forms, such as verbal speeches, slideshows, demonstrations, or multimedia displays. gage the audience and effectively convey the intended message.</p>
+                </div>
+                <div class="card-certifications mt-5">
+                    <div class="item-card-certifications">
+                        <img src="image/user.png" alt="">
+                        <p class="text-center h2 fw-bold">123 + K</p>
+                        <p class="text-center">Shipping</p>
+                    </div>
+                    <div class="item-card-certifications"></div>
+                    <div class="item-card-certifications"></div>
+                </div>
+            </div>
+            <div class="item-container-certifications">
+                <div class="certifications-img">
+                    <img style="grid-area: img1" src="image/mau-van-phong-lam-viec-dep-02.jpg" alt="img certification">
+                    <img style="grid-area: img2" src="image/mau-van-phong-lam-viec-dep-02.jpg" alt="img certification">
+                    <img style="grid-area: img3" src="image/mau-van-phong-lam-viec-dep-02.jpg" alt="img certification">
+                    <img style="grid-area: img4" src="image/mau-van-phong-lam-viec-dep-02.jpg" alt="img certification">
+                </div>
+            </div>
+        </div>
+    </section>
 <!--banner2-->
     <section class="banner-content">
         <div class="banner-content-child">
@@ -410,7 +441,7 @@
             </div>
         </div>
     </section>
-<!--our team-mate-->
+<!--    our team-mate   -->
     <div class="team-mate">
         <div class="content-teammate">
             <div class="title-content-teammate">
@@ -466,8 +497,8 @@
             </div>
         </div>
     </div>
-<!--    contact us-->
-    <div class="contact-us">
+<!--    contact us  -->
+    <section class="contact-us" id="contact-us">
         <div class="container-contact">
             <div class="content-contact-child">
                 <p class="text-hap name-box line-namebox">CONTACT US</p>
@@ -521,7 +552,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 <!--    foodter     -->
     <div class="footer">
         <div class="containerChild-Foodter">
