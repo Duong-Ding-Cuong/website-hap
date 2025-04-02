@@ -382,16 +382,16 @@ svg{
 .form-contact-input textarea{
     width: 100%;
     padding: 8px 16px;
-    font-size: 18px;
+    font-size: 17px;
     color: white;
     border: 1px solid #e1e1e1;
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: darkgray;
+    background-color: gray;
 }
 .form-contact-input input::placeholder,
 .form-contact-input textarea::placeholder{
-    color: white;
+    color: darkgray;
 }
 .form-contact-input textarea{
     height: 17vh;
