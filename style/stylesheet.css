@@ -133,7 +133,7 @@ ul li{
 .button{
     height: 60px;
     min-width: 160px;
-    border-radius: 28px;
+    border-radius: 5px;
     background-color: #ffffff;
     border: none;
     font-size: 18px;
@@ -141,15 +141,19 @@ ul li{
 }
 .btn-color-orange{
     background-color: #f47a3d;
-    border: none;
     color: white;
 }
-.btnGetStart:hover,
 .btn-color-orange:hover,
 .button:hover,
 .navChild:last-child > button:hover
 {
-    background-color: #4B2ECB;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 15px 2px white;
+}
+.button:hover{
+    background-color: #f47a3d;
+    color: white;
 }
 .bannerChild h1{
     color: #FFFFFF;
@@ -313,7 +317,7 @@ svg{
     background-color: #2d2d2d;
     padding: 5em;
     color: white;
-    height: 95vh;
+    height: 100vh;
 }
 .content-contact-child{
     display: flex;
