@@ -6,8 +6,8 @@
 .text-hap{
     color: #f47a3d !important;
 }
-body{
-    font-family: anton, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+body {
+    font-family: anton, system-ui !important;
 }
 a {
     text-decoration: none !important;
@@ -41,12 +41,11 @@ ul li{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-left: 40px !important;
     padding-right: 40px;
 }
 .navChild:first-child img{
-    margin: 5px;
-    height: 45px;
+    margin-left: 40px;
+    height: 50px;
     width: 170px;
     align-items: flex-start;
 }
@@ -65,6 +64,69 @@ ul li{
     font-size: 18px;
     width: 100%;
     margin:0 110px 0 0;
+}
+.nav-mobile{
+    display: none;
+}
+.nav-mobile img{
+    width: 35px;
+    height: 35px;
+}
+/*reponsive nav cho tablet vaf mobie*/
+@media (max-width: 1023px) {
+    .nav{
+        padding: 0 30px;
+        justify-content: space-around;
+    }
+    .navItems{
+        display: none;
+        margin: 0;
+        padding-left: 0;
+    }
+    .navChild:first-child img{
+        margin-left: 0;
+    }
+    .choose-language{
+        margin-left: auto;
+        margin-right: 1.5em;
+    }
+    .nav-mobile{
+        display: block;
+        position: relative;
+    }
+    .nav-mobile-list{
+        position: fixed;
+        top: 50px;
+        right: 0;
+        bottom: 0;
+        width: 320px;
+        max-width: 100%;
+        background-color: white;
+        padding-top: 2em;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        opacity: 0;
+    }
+    .nav-mobile-list ul li{
+        padding: 1em;
+        font-weight: 600;
+    }
+    .nav-mobile-list ul li:hover{
+        background-color: #f47a3d;
+        color: white;
+    }
+    .nav-mobile-list ul li:not(:last-child){
+        border-bottom: 2px solid #2d2d2d;
+    }
+    .show_navmobile{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .noscroll {
+        overflow: hidden;
+        height: 100vh;
+    }
+
 }
 /*choose language start*/
 .show{
@@ -111,23 +173,20 @@ ul li{
     width: 1.2rem;
     height: 1.2rem;
 }
-/*choose language end*/
-.navChild:last-child img{
+.navChild:nth-child(3) img{
     width: 35px;
     height: 35px;
 }
-.main-menu{
-    position: relative;
-}
-.main-menu a:hover{
-    color: #f47a3d;
-}
+/*choose language end*/
 .banner{
-    height: 90vh;
+    height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url('/website-hap/image/team-meeting-1024x708.jpg') no-repeat center center/cover;
-    padding-top: 20vh;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .btn-color-orange,
 .button{
@@ -571,12 +630,13 @@ svg{
 }
 /*<!--    Multiples contacts    -->*/
 #tool__society .tool__item {
-    bottom: 250px;
+    bottom: 50%;
+    transform: translateY(50%);
     cursor: pointer;
     position: fixed;
     right: 0;
     width: 48px;
-    z-index: 1000;
+    z-index: 1;
     color: white;
 }
 #tool__society .tool__item .tool__icon {
