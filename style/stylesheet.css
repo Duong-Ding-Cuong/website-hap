@@ -41,10 +41,11 @@ ul li{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-right: 40px;
+    padding-right: 30px;
+    height: 75px;
 }
 .navChild:first-child img{
-    margin-left: 40px;
+    margin-left: 30px;
     height: 50px;
     width: 170px;
     align-items: flex-start;
@@ -72,8 +73,8 @@ ul li{
     width: 35px;
     height: 35px;
 }
-/*reponsive nav cho tablet vaf mobie*/
-@media (max-width: 1023px) {
+/* reponsive nav cho tablet and mobile*/
+@media (max-width:1023px) {
     .nav{
         padding: 0 30px;
         justify-content: space-around;
@@ -177,7 +178,7 @@ ul li{
     width: 35px;
     height: 35px;
 }
-/*choose language end*/
+/*Banner*/
 .banner{
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -188,6 +189,25 @@ ul li{
     align-items: center;
     justify-content: center;
 }
+.bannerChild h1{
+    color: #FFFFFF;
+    font-size: 80px;
+    line-height: 1em;
+    margin: 35px 0;
+}
+@media (max-width: 1023px) {
+    .bannerChild{
+        padding: 1.5em;
+    }
+    .bannerChild h1{
+        font-size: 40px;
+        margin: 20px 0;
+    }
+    .bannerItem:last-child{
+        font-size: 1em;
+    }
+}
+/**/
 .btn-color-orange,
 .button{
     height: 60px;
@@ -213,12 +233,6 @@ ul li{
 .button:hover{
     background-color: #f47a3d;
     color: white;
-}
-.bannerChild h1{
-    color: #FFFFFF;
-    font-size: 80px;
-    line-height: 1em;
-    margin: 35px 0;
 }
 .circle-image {
     border-radius: 50%;
@@ -258,8 +272,12 @@ ul li{
 }
 /*footer*/
 .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 33.9375em;
     background-color:  #1b1a1d;
-    padding: 10vh 13vh 0 13vh;
+    padding: 6.25em 11.875em 0 11.875em;
     color: white;
     background-image: url("https://demo.sandamedia.net/sotech/wp-content/uploads/2024/05/bg-footer-right.webp");
     background-position: bottom right;
@@ -267,9 +285,9 @@ ul li{
 }
 .containerChild-Foodter{
     display: grid;
-    grid-template-columns:2fr 1fr 1fr 2fr;
+    grid-template-columns:1.5fr 1fr 1fr 1.5fr;
     gap: 30px;
-    margin-bottom: 10vh;
+    height: 15.75em;
 }
 .icon-logo ul{
     display: flex;
@@ -322,19 +340,33 @@ svg{
 .child-foodter li,
 .child-foodter:nth-child(1) p
 {
+    line-height: 1.875;
     font-size: 16px;
     margin: 10px 0;
     color: white;
 }
+.item-child-foodter{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item-child-foodter dl{
+    width: calc(33.33% - 12px);
+    margin-bottom: 10px;
+}
+.item-child-foodter:last-child dl img{
+    object-fit: cover;
+    width: 5.1875em;
+    height: 5.1875em;
+}
 /*Why choose us*/
 .why-choose-company{
+    padding: 0  10.9375em;
     width: 100%;
     height: 100%;
     background-position-y:0;
 }
 .why-choose-content{
-    margin: auto;
-    width: 80%;
+    width: 100%;
     padding: 10vh 0;
     height: 100%;
 }
@@ -356,6 +388,9 @@ svg{
     display: flex;
     align-items:flex-end ;
     border-bottom: 2px solid rgb(47, 47, 47);
+}
+.number-card-why-choose p{
+    font-size: 1vw;
 }
 .number-card-why-choose span {
     background-color: rgb(47, 47, 47);
@@ -475,7 +510,7 @@ svg{
     height: 100%;
     background-color: white;
     position: relative;
-    padding: 3em 5em;
+    padding: 3em  10.9375em;
 }
 .title-content-teammate{
     margin-bottom: 50px;
@@ -567,12 +602,11 @@ svg{
     width: 200px;
 }
 /*about us*/
-.about{
-
+.about {
     width: 100%;
     height: 100%;
-    padding: 5em;
-    background: url("/website-hap/image/backgoud-aboutus.png") no-repeat top center/cover;");
+    padding: 5em 10.9375em;
+    background-color: #6a6f78;
 }
 .container-about{
     width: 100%;
@@ -670,7 +704,7 @@ svg{
 .support-tech{
     width: 100%;
     height: 100%;
-    padding: 64px 112px;
+    padding: 64px 7.1875em;
     display: flex;
     justify-content: center;
 }
@@ -727,7 +761,7 @@ svg{
     margin: 0 2px;
     padding: 20px;
     filter: grayscale(1);
-    min-width: 120px;
+    min-width: 141px;
     max-width: 141px;
 }
 .item-list-tech:hover .name-list-tech,
@@ -739,7 +773,7 @@ svg{
 background-color: #f7b56b;
 }
 .item-list-tech:hover .list-tech-img{
-    min-width: 127px;
+    min-width: 126px;
 }
 .item-list-tech:hover .name-list-tech img{
     visibility: visible;
@@ -753,7 +787,7 @@ background-color: #f7b56b;
     background: url("/website-hap/image/background-service.png") no-repeat center center/cover;
     width: 100%;
     height: 100%;
-    padding: 65px 50px;
+    padding: 65px  10.9375em;
 }
 .title-container-service{
     margin: auto;
@@ -772,6 +806,7 @@ background-color: #f7b56b;
     gap: 10px;
 }
 .img-container-service img{
+    object-fit: cover;
     width: 100%;
     height: 100%;
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
@@ -786,7 +821,7 @@ background-color: #f7b56b;
 .certifications{
     width: 100%;
     height: 100%;
-    padding: 60px;
+    padding: 60px  10.9375em;
 }
 .item-container-certifications:first-child{
     width: 40%;
@@ -829,7 +864,7 @@ background-color: #f7b56b;
     gap: 20px;
 }
 .item-card-certifications{
-    padding: 1.5rem;
+    padding: 1em 0.5em;
     width: calc(33.33% - 20px);
     background-color: #f47a3d;
     display: flex;
@@ -841,4 +876,10 @@ background-color: #f7b56b;
 .item-card-certifications img{
     width: 50px;
     height: 50px;
+    margin-bottom: 0.5em;
+}
+.item-card-certifications p{
+    white-space: nowrap;
+    font-size: 20px;
+    margin-bottom: 0;
 }
