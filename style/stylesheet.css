@@ -66,6 +66,7 @@ ul li{
     width: 100%;
     margin:0 110px 0 0;
 }
+/* reponsive nav cho tablet and mobile*/
 .nav-mobile{
     display: none;
 }
@@ -73,7 +74,6 @@ ul li{
     width: 35px;
     height: 35px;
 }
-/* reponsive nav cho tablet and mobile*/
 @media (max-width:1023px) {
     .nav{
         padding: 0 30px;
@@ -97,7 +97,7 @@ ul li{
     }
     .nav-mobile-list{
         position: fixed;
-        top: 50px;
+        top: 75px;
         right: 0;
         bottom: 0;
         width: 320px;
@@ -279,6 +279,7 @@ ul li{
 .txt-center{
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -341,11 +342,6 @@ svg{
     border-bottom: #f47a3d 2px solid;
     transform: translateY(96%);
 }
-.child-foodter:nth-child(4) img{
-    width: 100%;
-    height: 10vh;
-    object-fit: cover;
-}
 .child-foodter ul{
     padding:0 !important;
 }
@@ -358,17 +354,67 @@ svg{
     color: white;
 }
 .item-child-foodter{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: 70px 70px;
+    grid-template-columns: 70px 70px 70px;
+    gap: 10px;
 }
-.item-child-foodter dl{
-    width: calc(33.33% - 12px);
-    margin-bottom: 10px;
+.item-child-foodter img{
+    height: 100%;
+    width: 100%;
 }
-.item-child-foodter:last-child dl img{
-    object-fit: cover;
-    width: 5.1875em;
-    height: 5.1875em;
+
+/*reponsive footer mobile and tablet*/
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    .footer{
+        padding: 1.875em 0 0 0;
+        height: 100%;
+    }
+    .containerChild-Foodter{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:1fr 1fr;
+        padding: 4.375em 15px;
+        height: 100%;
+    }
+    .item-child-foodter{
+        display: grid;
+        grid-template-rows: 13.02vw 13.02vw;
+        grid-template-columns: 13.02vw 13.02vw 13.02vw;
+        gap: 10px;
+    }
+    .item-child-foodter img{
+        height: 100%;
+        width: 100%;
+    }
+    .last-child-foodter{
+        font-size: 16px;
+    }
+}
+/*mobile*/
+@media (max-width: 767.98px) {
+    .footer{
+        padding: 1.875em 0 0 0;
+        height: 100%;
+    }
+    .containerChild-Foodter{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows:0.5fr 1fr 1fr 1fr;
+        padding: 4.375em 15px;
+        height: 100%;
+    }
+    .item-child-foodter{
+        display: grid;
+        grid-template-rows:  19.56vw  19.56vw;
+        grid-template-columns:  19.56vw  19.56vw  19.56vw;
+        gap: 10px;
+    }
+    .item-child-foodter img{
+        height: 100%;
+        width: 100%;
+    }
 }
 /*Why choose us*/
 .why-choose-company{
@@ -379,7 +425,7 @@ svg{
 }
 .why-choose-content{
     width: 100%;
-    padding: 10vh 0;
+    padding: 5em 0;
     height: 100%;
 }
 .why-choose-content-child:last-child{
@@ -391,7 +437,7 @@ svg{
 .card-why-choose{
     background-color: darkgray !important;
     padding: 2em;
-    height: 45vh !important;
+    height: 100%;
     position: relative;
     z-index: 1;
     justify-content: space-around;
@@ -403,6 +449,7 @@ svg{
 }
 .number-card-why-choose p{
     font-size: 1vw;
+    font-weight: 600;
 }
 .number-card-why-choose span {
     background-color: rgb(47, 47, 47);
@@ -416,6 +463,49 @@ svg{
 .icon-why-choose{
     width: 50%;
     margin-bottom: 25px;
+}
+/*reponsive why-choose-us mobile and tablet*/
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    .why-choose-company {
+        padding: 0 0.9375em;
+    }
+    .card-why-choose{
+        padding: 35px 15px;
+    }
+    .why-choose-content-child:last-child{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:1fr 1fr;
+        gap: 1.875em;
+        height: 100%;
+    }
+    .number-card-why-choose p{
+        font-size: 16px;
+    }
+    .icon-why-choose {
+        margin-top: 1em;
+        width: 30%;
+    }
+}
+/*mobile*/
+@media (max-width: 767.98px) {
+    .why-choose-company{
+        padding: 0 15px;
+    }
+    .why-choose-content-child:last-child{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows:1fr 1fr 1fr 1fr;
+        gap: 1.875em;
+        height: 100%;
+    }
+    .number-card-why-choose p{
+        font-size: 16px;
+    }
+    .icon-why-choose {
+        width: 31%;
+    }
 }
 /*contact us*/
 .contact-us{
@@ -517,13 +607,13 @@ svg{
     animation: pulse 2s ease-in-out infinite;
 }
 /*Contact us reponsive mobile and tablet*/
-@media (max-width: 1023.98px) {
+@media (min-width: 768px) and (max-width: 1023.98px) {
     .contact-us{
         height: 100%;
         padding: 4em 3.5625em;
     }
     .container-contact{
-        padding: 16px;
+        padding: 32px 16px;
         display: flex;
         flex-direction: column;
     }
@@ -533,6 +623,7 @@ svg{
         width: 100%;
     }
 }
+/*mobile*/
 @media (max-width: 767.98px) {
     .contact-us{
         padding: 0;
