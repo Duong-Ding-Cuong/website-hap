@@ -251,6 +251,18 @@ ul li{
     color: #f47a3d;
     font-size: 25px;
 }
+@media (max-width: 1023px) {
+    .name-box{
+        font-size: 14px;
+    }
+    .line-namebox::before {
+        width: 4vh !important;
+        height: 2px !important;
+    }
+    .title{
+        font-size: 24px;
+    }
+}
 .line-namebox {
     font-weight: bold;
     display: inline-flex;
@@ -504,6 +516,44 @@ svg{
 .icon-contact-phone{
     animation: pulse 2s ease-in-out infinite;
 }
+/*Contact us reponsive mobile and tablet*/
+@media (max-width: 1023.98px) {
+    .contact-us{
+        height: 100%;
+        padding: 4em 3.5625em;
+    }
+    .container-contact{
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+    .content-contact-child:first-child,
+    .content-contact-child:last-child
+    {
+        width: 100%;
+    }
+}
+@media (max-width: 767.98px) {
+    .contact-us{
+        padding: 0;
+    }
+    .form-contact-input {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "first-name"
+        "last-name"
+        "email"
+        "phone"
+        "other-contact"
+        "country"
+        "company"
+        "job-title"
+        "message";
+    }
+}
 /*our team mate*/
 .team-mate{
     width: 100%;
@@ -711,6 +761,7 @@ svg{
 }
 .container-support{
     max-width: 1290px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -782,6 +833,36 @@ background-color: #f7b56b;
     height: 35px;
     padding: 0.5rem;
     background-color: white;
+}
+@media (max-width: 1023.98px) {
+    .item-list-tech{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .support-tech{
+        padding: 64px 0;
+    }
+    .container-support{
+        max-width: 100%;
+        width: 85%;
+        padding: 0 15px;
+    }
+    .name-list-tech{
+        width: 100%;
+        margin-bottom: 4px;
+    }
+    .list-tech-img{
+        margin-right: 4px;
+        margin-left: 0;
+    }
+
+}
+@media (max-width: 767.98px) {
+    .container-support{
+        width: 100%;
+    }
 }
 /*    service    */
 .service{
