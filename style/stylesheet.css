@@ -676,6 +676,7 @@ svg{
 }
 .content-teammate{
     width: 100%;
+    overflow: hidden;
 }
 .buttons-teammate {
     margin-top: 110px;
@@ -708,11 +709,11 @@ svg{
     z-index: 1;
 }
 .slide-teammate-img{
-    height: 100%;
+    height: 120%;
 }
 .slide-teammate-img img{
     width: 100%;
-    height: 120%;
+    height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -732,6 +733,31 @@ svg{
 }
 .item-slide-teammate:hover:before{
     height: 100%;
+}
+/*our team mate responsive mobile and tablet*/
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    .team-mate{
+        padding: 3em 16px;
+    }
+    .slide-teammate{
+        width: 200%;
+    }
+    .item-slide-teammate{
+        width: calc(33.33% - 30px);
+    }
+}
+/*mobile*/
+@media (max-width: 767.98px) {
+    .team-mate{
+        padding: 3em 0;
+    }
+    .slide-teammate{
+        width: 422%;
+    }
+    .item-slide-teammate{
+        width: 100%;
+    }
 }
 /*banner content page*/
 .banner-content{
