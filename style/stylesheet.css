@@ -358,9 +358,9 @@ ul li{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 33.9375em;
+    height: 100%;
     background-color:  #1b1a1d;
-    padding: 6.25em 11.875em 0 11.875em;
+    padding: 6.25em 11.875em 3em 11.875em;
     color: white;
     background-image: url("https://demo.sandamedia.net/sotech/wp-content/uploads/2024/05/bg-footer-right.webp");
     background-position: bottom right;
@@ -381,13 +381,6 @@ ul li{
 svg{
     fill: currentColor;
     color: #f03b01;
-}
-.last-child-foodter{
-    font-size: 20px;
-    padding: 36px 0 20px 0;
-    border-top: 1px solid #ffffff1A;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
-    background-color:  #262527;
 }
 .child-foodter:nth-child(2) p,
 .child-foodter:nth-child(3) p,
@@ -458,9 +451,6 @@ svg{
         height: 100%;
         width: 100%;
     }
-    .last-child-foodter{
-        font-size: 16px;
-    }
 }
 /*mobile*/
 @media (max-width: 767.98px) {
@@ -505,8 +495,9 @@ svg{
     height: 100%;
 }
 .card-why-choose{
-    background-color: darkgray !important;
-    padding: 2em;
+    background-color:#f47a3d !important;
+    color: white !important;
+    padding: 1em;
     height: 100%;
     position: relative;
     z-index: 1;
@@ -649,15 +640,10 @@ svg{
     width: 100%;
     padding: 8px 16px;
     font-size: 17px;
-    color: white;
     border: 1px solid #e1e1e1;
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: gray;
-}
-.form-contact-input input::placeholder,
-.form-contact-input textarea::placeholder{
-    color: darkgray;
+    background-color: white;
 }
 .form-contact-input textarea{
     height: 17vh;
@@ -771,7 +757,7 @@ svg{
     gap: 30px;
 }
 .item-slide-teammate{
-    background-color: darkgray;
+    background-color: #f4f5f8;
     padding: 1em 15px 0;
     width: calc(25% - 30px);
     height: 250px;
