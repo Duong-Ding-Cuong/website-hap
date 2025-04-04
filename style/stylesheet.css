@@ -753,7 +753,7 @@ svg{
         padding: 3em 0;
     }
     .slide-teammate{
-        width: 422%;
+        width: 423%;
     }
     .item-slide-teammate{
         width: 100%;
@@ -785,6 +785,32 @@ svg{
 }
 .banner-content-child-button button{
     width: 200px;
+}
+.banner-content-child-text{
+    max-width: 600px;
+}
+.banner-content-child-text h3{
+    font-size: 40px;
+}
+/*responsive banner content cho mobile and tablet*/
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    .banner-content{
+        padding: 15px;
+        height: 19.9375em;
+    }
+}
+@media (max-width: 767.98px) {
+    .banner-content{
+        padding: 15px;
+        height: 18.5875em;
+    }
+    .banner-content-child-text h3{
+        font-size: 30px;
+    }
+    .banner-content-child-button button{
+        height: 51px;
+    }
 }
 /*about us*/
 .about {
