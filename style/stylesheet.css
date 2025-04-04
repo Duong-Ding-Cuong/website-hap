@@ -766,13 +766,14 @@ svg{
     height: 50px;
 }
 .slide-teammate{
+    width: 102%;
     display: flex;
     gap: 30px;
 }
 .item-slide-teammate{
-    background-color: white;
-    padding: 1em 1em 0;
-    width: 25%;
+    background-color: darkgray;
+    padding: 1em 15px 0;
+    width: calc(25% - 30px);
     height: 250px;
     margin-bottom: 60px;
     position: relative;
@@ -780,7 +781,7 @@ svg{
     flex-shrink: 0;
 }
 .slide-teammate-img{
-    height: 120%;
+    height: 100%;
 }
 .slide-teammate-img img{
     width: 100%;
