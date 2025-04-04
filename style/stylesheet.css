@@ -477,8 +477,8 @@ svg{
     }
     .item-child-foodter{
         display: grid;
-        grid-template-rows:  19.56vw  19.56vw;
-        grid-template-columns:  19.56vw  19.56vw  19.56vw;
+        grid-template-rows:  24vw  24vw;
+        grid-template-columns:  24vw  24vw  24vw;
         gap: 10px;
     }
     .item-child-foodter img{
@@ -823,7 +823,7 @@ svg{
         padding: 3em 0;
     }
     .slide-teammate{
-        width: 423%;
+        width: 414%;
     }
     .item-slide-teammate{
         width: 100%;
