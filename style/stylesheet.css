@@ -777,6 +777,7 @@ svg{
     margin-bottom: 60px;
     position: relative;
     z-index: 1;
+    flex-shrink: 0;
 }
 .slide-teammate-img{
     height: 120%;
@@ -811,10 +812,10 @@ svg{
         padding: 3em 16px;
     }
     .slide-teammate{
-        width: 208%;
+        width: 100%;
     }
     .item-slide-teammate{
-        width: calc(33.33% - 30px);
+        width: calc(50% - 14px);
     }
 }
 /*mobile*/
@@ -823,10 +824,16 @@ svg{
         padding: 3em 0;
     }
     .slide-teammate{
-        width: 414%;
+        width: 100%;
     }
     .item-slide-teammate{
         width: 100%;
+    }
+    .slide-teammate-img{
+        height: 130%;
+    }
+    .buttons-teammate{
+        margin-top: 130px;
     }
 }
 /*banner content page*/
