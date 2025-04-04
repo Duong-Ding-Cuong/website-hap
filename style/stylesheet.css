@@ -239,6 +239,12 @@ ul li{
     width: 35px;
     height: 35px;
 }
+/*responsive choose language cho mobile*/
+@media (max-width:767.98px) {
+    .choose-language ul{
+        top:56px;
+    }
+}
 /*Banner*/
 .banner{
     height: 100vh;
