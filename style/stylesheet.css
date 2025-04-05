@@ -3,6 +3,9 @@
     p{
         font-size: 12px !important;
     }
+    .name-box{
+        font-size: 14px !important;
+    }
 }
 *{
     margin: 0;
@@ -821,6 +824,9 @@ svg{
     .team-mate{
         padding: 3em 0;
     }
+    .title-content-teammate{
+        margin-bottom: 0;
+    }
     .slide-teammate{
         width: 100%;
     }
@@ -831,7 +837,11 @@ svg{
         height: 130%;
     }
     .buttons-teammate{
-        margin-top: 130px;
+        margin-top: 90px;
+    }
+    .buttons-teammate img {
+        width: 30px;
+        height: 30px;
     }
 }
 /*banner content page*/
@@ -884,7 +894,7 @@ svg{
         font-size: 30px;
     }
     .banner-content-child-button button{
-        height: 51px;
+        height: 45px;
     }
     .banner-content-child-button button{
         width: 140px;
