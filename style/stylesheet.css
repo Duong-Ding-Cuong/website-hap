@@ -880,7 +880,7 @@ svg{
 .about {
     width: 100%;
     height: 100%;
-    padding: 5em 10.9375em;
+    padding: 5em 0;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(/website-hap/image/bachgrow-sevice.png) no-repeat center center / cover;
 }
@@ -903,7 +903,6 @@ svg{
     flex-direction: row;
     flex-wrap:wrap;
     align-items: flex-start;
-    height: 30vh;
 }
 .number-text-aboutchild{
     width: 3rem;
@@ -916,11 +915,9 @@ svg{
     margin-right: 2rem;
 }
 .content-text-aboutchild{
-    width: calc(100% - 5rem);
-    padding-right: 4rem;
+    width: calc(95% - 5rem);
 }
 .about-child:last-child{
-    width: calc(100% - 50%);
     display: flex;
     gap: 1rem;
     height: 100%;
@@ -1094,7 +1091,7 @@ background-color: #f7b56b;
     background: url("/website-hap/image/background-service.png") no-repeat center center/cover;
     width: 100%;
     height: 100%;
-    padding: 65px  10.9375em;
+    padding: 65px 0;
 }
 .title-container-service{
     margin: auto;
@@ -1103,14 +1100,13 @@ background-color: #f7b56b;
 }
 .item-container-service{
     height: 100%;
-    width: calc(33.33% - 10px);
+    width: 100%;
 }
 .content-container-service{
     width: 100%;
-    height: 70vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
 }
 .img-container-service img{
     object-fit: cover;
@@ -1119,19 +1115,15 @@ background-color: #f7b56b;
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 .text-service:last-child{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
 }
 /*certifications*/
 .certifications{
     width: 100%;
     height: 100%;
-    padding: 60px  10.9375em;
+    padding: 60px  0;
 }
 .item-container-certifications:first-child{
-    width: 40%;
     padding-bottom: 3em;
     border-bottom: 2px solid black;
     display: flex;
@@ -1139,11 +1131,10 @@ background-color: #f7b56b;
     justify-content: space-between;
 }
 .item-container-certifications:last-child{
-    width: calc(60% - 10px);
-    margin-left: 10px;
 }
 .container-certifications{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
 }
