@@ -391,9 +391,10 @@ svg{
     fill: currentColor;
     color: #f03b01;
 }
-.child-foodter:nth-child(2) p,
-.child-foodter:nth-child(3) p,
-.child-foodter:nth-child(4) p{
+.child-foodter:nth-child(2) span,
+.child-foodter:nth-child(3) span,
+.child-foodter:nth-child(4) span{
+    display: block;
     margin: 0 0 20px 0;
     font-size: 20px;
     line-height: 2em;
@@ -401,9 +402,9 @@ svg{
     border-bottom: #1c272e 2px solid;
     position: relative;
 }
-.child-foodter:nth-child(2) p:before,
-.child-foodter:nth-child(3) p:before,
-.child-foodter:nth-child(4) p:before{
+.child-foodter:nth-child(2) span:before,
+.child-foodter:nth-child(3) span:before,
+.child-foodter:nth-child(4) span:before{
     content: "";
     position: absolute;
     bottom: 0;
