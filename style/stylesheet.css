@@ -844,6 +844,9 @@ svg{
         width: 30px;
         height: 30px;
     }
+    .content-teammate {
+        padding: 0 15px;
+    }
 }
 /*banner content page*/
 .banner-content{
@@ -1155,6 +1158,12 @@ background-color: #f7b56b;
     height: 100%;
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
+.text-service h1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 .text-service:last-child{
     margin: auto;
 }
@@ -1162,6 +1171,9 @@ background-color: #f7b56b;
 @media (max-width: 767.98px) {
     .content-container-service{
         margin-top: 2em;
+    }
+    .service{
+        padding: 20px 0;
     }
 }
 /*certifications*/
