@@ -523,16 +523,16 @@ svg{
 }
 .icon-why-choose{
     width: 50%;
-    margin-bottom: 25px;
+}
+.content-card-why-choose{
+    display: flex;
+    flex-wrap: wrap;
 }
 /*reponsive why-choose-us mobile and tablet*/
 /*tablet*/
 @media (min-width: 768px) and (max-width: 1023.98px) {
     .why-choose-company {
         padding: 0 0.9375em;
-    }
-    .card-why-choose{
-        padding: 35px 15px;
     }
     .why-choose-content-child:last-child{
         display: grid;
