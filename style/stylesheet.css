@@ -1167,9 +1167,6 @@ background-color: #f7b56b;
     align-items: center;
     margin-bottom: 1em;
 }
-.text-service h1 span{
-    font-weight: 700;
-}
 .text-service:last-child{
     margin: auto;
 }
@@ -1200,6 +1197,10 @@ background-color: #f7b56b;
     }
     .text-service h1{
         margin-bottom: 0;
+    }
+    .text-service h1 span{
+        font-weight: 700;
+        font-size: 1.25rem;
     }
 }
 /*certifications*/
