@@ -1167,6 +1167,9 @@ background-color: #f7b56b;
     align-items: center;
     margin-bottom: 1em;
 }
+.text-service h1 span{
+    font-weight: 700;
+}
 .text-service:last-child{
     margin: auto;
 }
