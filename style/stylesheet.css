@@ -369,7 +369,7 @@ ul li{
     justify-content: space-between;
     height: 100%;
     background-color:  #1b1a1d;
-    padding: 6.25em 11.875em 3em 11.875em;
+    padding: 6.25em 11.875em 5em 11.875em;
     color: white;
     background-image: url("https://demo.sandamedia.net/sotech/wp-content/uploads/2024/05/bg-footer-right.webp");
     background-position: bottom right;
@@ -1226,8 +1226,12 @@ background-color: #f7b56b;
 }
 /*responsive certification mobile and tablet*/
 @media (min-width: 768px) and (max-width: 991.98px) {
+    .certifications{
+        padding: 35px 0;
+    }
     .item-container-certifications:first-child{
         padding-right: 0;
+        padding-bottom: 1.5em;
         border-style: none;
     }
     .card-certifications{
@@ -1235,11 +1239,15 @@ background-color: #f7b56b;
     }
 }
 @media (max-width: 767.98px) {
+    .certifications{
+        padding: 35px 0;
+    }
     .card-certifications{
         margin-top: 0;
     }
     .item-container-certifications:first-child{
         padding-right: 0;
+        padding-bottom: 1em;
         border-style: none;
     }
     .text-certifications h1{
