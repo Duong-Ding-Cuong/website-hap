@@ -823,7 +823,7 @@ svg{
 /*mobile*/
 @media (max-width: 767.98px) {
     .team-mate{
-        padding: 3em 0;
+        padding: 2em 0;
     }
     .title-content-teammate{
         margin-bottom: 0;
@@ -838,7 +838,8 @@ svg{
         height: 130%;
     }
     .buttons-teammate{
-        margin-top: 90px;
+        margin-top: 100px;
+        gap: 100px;
     }
     .buttons-teammate img {
         width: 30px;
