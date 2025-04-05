@@ -1165,9 +1165,13 @@ background-color: #f7b56b;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1em;
 }
 .text-service:last-child{
     margin: auto;
+}
+.img-container-service:nth-child(2){
+    display: none;
 }
 /*responsive service cho tablet and mobile*/
 @media (max-width: 767.98px) {
@@ -1176,6 +1180,23 @@ background-color: #f7b56b;
     }
     .service{
         padding: 20px 0;
+    }
+    .img-container-service:nth-child(2){
+        display: inline-block;
+    }
+    .img-container-service img{
+        clip-path: none;
+        width: 100%;
+        height: 100%;
+    }
+    .text-service:nth-child(1){
+        padding-right: 10px;
+    }
+    .text-service:last-child{
+        padding-left: 10px;
+    }
+    .text-service h1{
+        margin-bottom: 0;
     }
 }
 /*certifications*/
