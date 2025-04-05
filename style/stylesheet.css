@@ -471,9 +471,10 @@ svg{
     .containerChild-Foodter{
         display: grid;
         grid-template-columns:1fr;
-        grid-template-rows:0.5fr 1fr 1fr 1fr;
-        padding: 4.375em 15px;
+        grid-template-rows:0.5fr 0.5fr 0.5fr 1fr;
+        padding: 1.375em 15px;
         height: 100%;
+        gap: 15px;
     }
     .item-child-foodter{
         display: grid;
@@ -1224,7 +1225,6 @@ background-color: #f7b56b;
     margin-top: 3em;
     width: 100%;
     display: flex;
-    gap: 20px;
     justify-content: space-between;
 }
 .item-card-certifications{
