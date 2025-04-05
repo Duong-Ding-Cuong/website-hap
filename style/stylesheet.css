@@ -1,3 +1,9 @@
+/*responsive cho các biến global*/
+@media (max-width: 767.98px) {
+    p{
+        font-size: 12px !important;
+    }
+}
 *{
     margin: 0;
     padding: 0;
@@ -281,7 +287,7 @@ ul li{
 .btn-color-orange,
 .button{
     height: 60px;
-    min-width: 160px;
+    min-width: 150px;
     border-radius: 5px;
     background-color: #ffffff;
     border: none;
@@ -298,7 +304,7 @@ ul li{
 {
     background-color: white;
     color: black;
-    box-shadow: 0 0 15px 2px white;
+    box-shadow: 0 0 15px 2px black;
 }
 .button:hover{
     background-color: #f47a3d;
@@ -478,10 +484,12 @@ svg{
 }
 /*Why choose us*/
 .why-choose-company{
-    padding: 0  10.9375em;
     width: 100%;
     height: 100%;
     background-position-y:0;
+}
+.why-choose-content-child-title{
+    margin-bottom: 20px;
 }
 .why-choose-content{
     width: 100%;
@@ -491,13 +499,13 @@ svg{
 .why-choose-content-child:last-child{
     display: grid;
     grid-template-columns:1fr 1fr 1fr 1fr;
-    gap: 3em;
+    gap: 2em;
     height: 100%;
 }
 .card-why-choose{
     background-color:#f47a3d !important;
     color: white !important;
-    padding: 1em;
+    padding: 2em 1em;
     height: 100%;
     position: relative;
     z-index: 1;
@@ -522,7 +530,7 @@ svg{
     margin-left: auto;
 }
 .icon-why-choose{
-    width: 50%;
+    margin: 0.5em 0 1em 0;
 }
 .content-card-why-choose{
     display: flex;
@@ -531,9 +539,6 @@ svg{
 /*reponsive why-choose-us mobile and tablet*/
 /*tablet*/
 @media (min-width: 768px) and (max-width: 1023.98px) {
-    .why-choose-company {
-        padding: 0 0.9375em;
-    }
     .why-choose-content-child:last-child{
         display: grid;
         grid-template-columns:1fr 1fr;
@@ -551,8 +556,14 @@ svg{
 }
 /*mobile*/
 @media (max-width: 767.98px) {
-    .why-choose-company{
-        padding: 0 15px;
+    .card-why-choose{
+        padding: 1em;
+    }
+    .why-choose-content-child-title{
+        margin-bottom: 10px;
+    }
+    .why-choose-content{
+        padding: 2em 0;
     }
     .why-choose-content-child:last-child{
         display: grid;
@@ -564,8 +575,8 @@ svg{
     .number-card-why-choose p{
         font-size: 16px;
     }
-    .icon-why-choose {
-        width: 31%;
+    .why-choose-content-child{
+        padding: 0 10px;
     }
 }
 /*contact us*/
@@ -735,7 +746,7 @@ svg{
     overflow: hidden;
 }
 .buttons-teammate {
-    margin-top: 110px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -796,7 +807,7 @@ svg{
 /*tablet*/
 @media (min-width: 768px) and (max-width: 1023.98px) {
     .team-mate{
-        padding: 3em 16px;
+        padding: 3em;
     }
     .slide-teammate{
         width: 100%;
@@ -875,6 +886,10 @@ svg{
     .banner-content-child-button button{
         height: 51px;
     }
+    .banner-content-child-button button{
+        width: 140px;
+        font-size: 14px;
+    }
 }
 /*about us*/
 .about {
@@ -921,7 +936,6 @@ svg{
     display: flex;
     gap: 1rem;
     height: 100%;
-
 }
 .about-child-img{
     width: 100%;
@@ -934,6 +948,11 @@ svg{
 }
 .about-child-img:nth-child(2){
     margin-top: 5rem;
+}
+@media (max-width: 1023.98px) {
+    .about-child:last-child{
+    display: none;
+    }
 }
 /*<!--    Multiples contacts    -->*/
 #tool__society .tool__item {
@@ -1103,6 +1122,7 @@ background-color: #f7b56b;
     width: 100%;
 }
 .content-container-service{
+    margin-top: 2em;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -1117,24 +1137,34 @@ background-color: #f7b56b;
 .text-service:last-child{
     margin: auto;
 }
+/*responsive service cho tablet and mobile*/
+@media (max-width: 767.98px) {
+    .content-container-service{
+        margin-top: 2em;
+    }
+}
 /*certifications*/
 .certifications{
     width: 100%;
     height: 100%;
     padding: 60px  0;
+    margin-bottom: 1em;
 }
 .item-container-certifications:first-child{
-    padding-bottom: 3em;
+    padding: 0 20px 3em 0;
     border-bottom: 2px solid black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.item-container-certifications:last-child{
+.certifications-title,
+.text-certifications h1{
+    margin-bottom: 1em;
 }
 .container-certifications{
     display: flex;
     flex-wrap: wrap;
+
     width: 100%;
     height: 100%;
 }
@@ -1157,9 +1187,11 @@ background-color: #f7b56b;
     border-radius: 10px;
 }
 .card-certifications{
+    margin-top: 3em;
     width: 100%;
     display: flex;
     gap: 20px;
+    justify-content: space-between;
 }
 .item-card-certifications{
     padding: 1em 0.5em;
@@ -1180,4 +1212,29 @@ background-color: #f7b56b;
     white-space: nowrap;
     font-size: 20px;
     margin-bottom: 0;
+}
+/*responsive certification mobile and tablet*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .item-container-certifications:first-child{
+        padding-right: 0;
+        border-style: none;
+    }
+    .card-certifications{
+        margin-top: 0;
+    }
+}
+@media (max-width: 767.98px) {
+    .card-certifications{
+        margin-top: 0;
+    }
+    .item-container-certifications:first-child{
+        padding-right: 0;
+        border-style: none;
+    }
+    .text-certifications h1{
+        margin-bottom: 0;
+    }
+    .certifications-title{
+        margin-bottom: 0.5em;
+    }
 }
