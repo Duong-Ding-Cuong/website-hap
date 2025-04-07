@@ -16,7 +16,7 @@
     color: #f47a3d !important;
 }
 body {
-    font-family: anton, system-ui !important;
+    font-family: munlish, system-ui !important;
 }
 a {
     text-decoration: none !important;
@@ -41,7 +41,7 @@ ul li{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: white;
+    background-color: black;
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
 }
@@ -66,6 +66,9 @@ ul li{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.main-menu{
+    color: white;
 }
 .navItems{
     display: flex;
@@ -121,6 +124,7 @@ ul li{
         opacity: 0;
     }
     .nav-mobile-list ul li{
+        color: white;
         padding: 1em;
         font-weight: 600;
     }
@@ -129,7 +133,7 @@ ul li{
         color: white;
     }
     .nav-mobile-list ul li:not(:last-child){
-        border-bottom: 2px solid #2d2d2d;
+        border-bottom: 2px solid white;
     }
     .show_navmobile{
         transform: translateX(0);
@@ -145,7 +149,7 @@ ul li{
     .nav{
         height: 56px;
         padding: 0 30px;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .navItems{
         display: none;
@@ -154,12 +158,11 @@ ul li{
     }
     .navChild:first-child img{
         margin-left: 0;
-        height: 40px;
-        width: 130px;
+        height: 35px;
+        width: 120px;
     }
     .choose-language{
-        margin-left: auto;
-        margin-right: 1.5em;
+        display: none;
     }
     .nav-mobile{
         display: block;
@@ -181,15 +184,16 @@ ul li{
     .nav-mobile-list ul li{
         padding: 1em;
         font-weight: 600;
+        color: white;
     }
     .nav-mobile-list ul li:hover{
         background-color: #f47a3d;
-        color: white;
     }
     .nav-mobile-list ul li:not(:last-child){
-        border-bottom: 2px solid #2d2d2d;
+        border-bottom: 2px solid white;
     }
     .show_navmobile{
+        background-color: black;
         transform: translateX(0);
         opacity: 1;
     }
@@ -202,6 +206,9 @@ ul li{
 /*choose language start*/
 .show{
     display: block !important;
+}
+.choose-language{
+    color: white;
 }
 .choose-language ul{
     display: none;
@@ -239,6 +246,7 @@ ul li{
     display: flex;
     align-items: center;
     gap: .5rem;
+    color: white;
 }
 .choose-language a img:nth-child(2){
     width: 1.2rem;
@@ -257,8 +265,8 @@ ul li{
 /*Banner*/
 .banner{
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url('/website-hap/image/team-meeting-1024x708.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('/website-hap/image/banner.png') no-repeat center center/cover;
     color: white;
     display: flex;
     flex-direction: column;
@@ -273,7 +281,8 @@ ul li{
 }
 @media (max-width: 1023px) {
     .banner{
-        height: 29.375em;
+        height: 27.375em;
+        padding-top: 55px;
     }
     .bannerChild{
         padding: 1.5em;
@@ -492,6 +501,7 @@ svg{
     width: 100%;
     height: 100%;
     background-position-y:0;
+    background-color: black;
 }
 .why-choose-content-child-title{
     margin-bottom: 20px;
@@ -739,7 +749,7 @@ svg{
 .team-mate{
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: black;
     position: relative;
     padding: 3em  10.9375em;
 }
@@ -781,6 +791,7 @@ svg{
     position: relative;
     z-index: 1;
     flex-shrink: 0;
+    border-radius: 10px;
 }
 .slide-teammate-img{
     height: 100%;
@@ -789,7 +800,7 @@ svg{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .item-slide-teammate:before{
     content: "";
@@ -801,12 +812,15 @@ svg{
     background-color: #f47a3d;
     transition: height 0.3s;
     z-index: -1;
+    border-radius: 10px;
 }
 .item-slide-teammate:hover{
     color: white;
+    border-radius: 10px;
 }
 .item-slide-teammate:hover:before{
     height: 100%;
+    border-radius: 10px;
 }
 /*our team mate responsive mobile and tablet*/
 /*tablet*/
@@ -856,7 +870,7 @@ svg{
     width: 100%;
     height: 75vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(/website-hap/image/bg-h4.png) no-repeat center center / cover;
+    url(/website-hap/image/backgroungbanner2.png) no-repeat center center / cover;
     padding: 3em;
 }
 .banner-content-child{
@@ -897,7 +911,7 @@ svg{
         height: 18.5875em;
     }
     .banner-content-child-text h3{
-        font-size: 30px;
+        font-size: 23px;
     }
     .banner-content-child-button button{
         height: 45px;
@@ -912,8 +926,7 @@ svg{
     width: 100%;
     height: 100%;
     padding: 5em 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(/website-hap/image/bachgrow-sevice.png) no-repeat center center / cover;
+    background-color: #000000;
 }
 .container-about{
     width: 100%;
@@ -1015,6 +1028,7 @@ svg{
     padding: 64px 7.1875em;
     display: flex;
     justify-content: center;
+    background-color: #101010;
 }
 .container-support{
     max-width: 1290px;
@@ -1036,7 +1050,7 @@ svg{
 }
 .name-list-tech{
     height: 100%;
-    background-color: #F6F7FC;
+    background-color: #6d3c21;
     padding: 14px 24px;
     display: flex;
     align-items: center;
@@ -1050,6 +1064,7 @@ svg{
     transition: all 300ms ease 0ms;
 }
 .name-list-tech h3{
+    color: white;
     margin-bottom: 0;
     font-size: 14px;
     font-weight: 700;
@@ -1068,11 +1083,11 @@ svg{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #F6F7FC;
+    background-color: #581f00eb;
     height: 80px;
     margin: 0 2px;
     padding: 20px;
-    filter: grayscale(1);
+    filter: grayscale(0.5);
     min-width: 141px;
     max-width: 141px;
 }
@@ -1165,10 +1180,10 @@ background-color: #f7b56b;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1em;
+    margin-bottom: 0.2em;
 }
 .text-service:last-child{
-    margin: auto;
+    margin-top: auto;
 }
 .img-container-service:nth-child(2){
     display: none;
@@ -1195,9 +1210,6 @@ background-color: #f7b56b;
     .text-service:last-child{
         padding-left: 10px;
     }
-    .text-service h1{
-        margin-bottom: 0;
-    }
     .text-service h1 span{
         font-weight: 800;
         font-size: 1.25rem;
@@ -1208,7 +1220,7 @@ background-color: #f7b56b;
     width: 100%;
     height: 100%;
     padding: 60px  0;
-    margin-bottom: 1em;
+    background: linear-gradient(180deg, #7c3c23, #000000);
 }
 .item-container-certifications:first-child{
     padding: 0 20px 3em 0;
@@ -1250,7 +1262,7 @@ background-color: #f7b56b;
     margin-top: 3em;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .item-card-certifications{
     padding: 1em 0.5em;
