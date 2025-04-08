@@ -17,6 +17,7 @@
 }
 body {
     font-family: munlish, system-ui !important;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none !important;
@@ -305,6 +306,7 @@ ul li{
     border: none;
     font-size: 18px;
     font-weight: bold;
+    transition: transform 0.3s ease;
 }
 .btn-color-orange{
     background-color: #f47a3d;
@@ -317,6 +319,7 @@ ul li{
     background-color: white;
     color: black;
     box-shadow: 0 0 15px 2px black;
+    transform: scale(1.1);
 }
 .button:hover{
     background-color: #f47a3d;
@@ -679,7 +682,7 @@ svg{
         transform: scale(1);
     }
     50% {
-        transform: scale(1.3);
+        transform: scale(1.4);
     }
     100% {
         transform: scale(1);
@@ -759,6 +762,7 @@ svg{
 .content-teammate{
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 .buttons-teammate {
     margin-top: 50px;
@@ -778,12 +782,13 @@ svg{
     height: 50px;
 }
 .slide-teammate{
-    width: 102%;
     display: flex;
     gap: 30px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
 }
 .item-slide-teammate{
-    background-color: #f4f5f8;
+    background-color: #602e1b;
     padding: 1em 15px 0;
     width: calc(25% - 30px);
     height: 250px;
@@ -792,6 +797,8 @@ svg{
     z-index: 1;
     flex-shrink: 0;
     border-radius: 10px;
+    color: white;
+    transition: transform 0.5s ease;
 }
 .slide-teammate-img{
     height: 100%;
@@ -815,7 +822,6 @@ svg{
     border-radius: 10px;
 }
 .item-slide-teammate:hover{
-    color: white;
     border-radius: 10px;
 }
 .item-slide-teammate:hover:before{
@@ -1047,6 +1053,8 @@ svg{
     margin-bottom: 16px;
     height: 80px;
     width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 .name-list-tech{
     height: 100%;
@@ -1056,6 +1064,7 @@ svg{
     align-items: center;
     transition: all 300ms ease 0ms;
     min-height: 62px;
+    z-index: 2;
 }
 .name-list-tech img{
     width: 0;
@@ -1076,8 +1085,9 @@ svg{
     width: 100%;
     height: 100%;
     display: flex;
-    overflow: hidden;
-    touch-action: pan-y;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    box-sizing: content-box;
 }
 .list-tech-img{
     display: flex;
@@ -1090,6 +1100,7 @@ svg{
     filter: grayscale(0.5);
     min-width: 141px;
     max-width: 141px;
+    transition: transform 0.5s ease-in-out;
 }
 .item-list-tech:hover .name-list-tech,
 .item-list-tech:hover .list-tech-img{
@@ -1109,6 +1120,25 @@ background-color: #f7b56b;
     padding: 0.5rem;
     background-color: white;
 }
+.item-list-tech.active .list-tech-img,
+.item-list-tech.active .name-list-tech {
+    background-color: #f47a3d;
+    filter: grayscale(0);
+}
+
+.item-list-tech.active .list-tech-img {
+    background-color: #f7b56b;
+    min-width: 126px;
+}
+
+.item-list-tech.active .name-list-tech img {
+    visibility: visible;
+    width: 35px;
+    height: 35px;
+    padding: 0.5rem;
+    background-color: white;
+}
+
 /*tablet*/
 @media (max-width: 1023.98px) {
     .item-list-tech{
@@ -1281,7 +1311,7 @@ background-color: #f7b56b;
 }
 .item-card-certifications p{
     white-space: nowrap;
-    font-size: 20px;
+    font-size: 28px;
     margin-bottom: 0;
 }
 /*responsive certification mobile and tablet*/
