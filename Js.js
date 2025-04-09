@@ -57,6 +57,24 @@ document.addEventListener("DOMContentLoaded", () => {
     let isSliding = false;
 
     function slideNext() {
+        // Slide sang trái (phần tử đầu → cuối)
+        if (isSliding) return;
+        isSliding = true;
+
+        const itemWidth = slider.children[0].offsetWidth + 30;
+        slider.style.transition = "transform 0.5s ease-in-out";
+        slider.style.transform = `translateX(-${itemWidth}px)`;
+
+        setTimeout(() => {
+            const firstItem = slider.firstElementChild;
+            slider.appendChild(firstItem);
+            slider.style.transition = "none";
+            slider.style.transform = "translateX(0)";
+            isSliding = false;
+        }, 500);
+    }
+
+    function slidePrev() {
         // Slide sang phải (phần tử cuối → đầu)
         if (isSliding) return;
         isSliding = true;
@@ -78,27 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 500);
     }
 
-    function slidePrev() {
-        // Slide sang trái (phần tử đầu → cuối)
-        if (isSliding) return;
-        isSliding = true;
-
-        const itemWidth = slider.children[0].offsetWidth + 30;
-        slider.style.transition = "transform 0.5s ease-in-out";
-        slider.style.transform = `translateX(-${itemWidth}px)`;
-
-        setTimeout(() => {
-            const firstItem = slider.firstElementChild;
-            slider.appendChild(firstItem);
-            slider.style.transition = "none";
-            slider.style.transform = "translateX(0)";
-            isSliding = false;
-        }, 500);
-    }
-
-    nextBtn.addEventListener("click", slideNext);  // chuyển sang phải
-    prevBtn.addEventListener("click", slidePrev);  // chuyển sang trái
+    nextBtn.addEventListener("click", slideNext);  // chuyển sang trái (đầu → cuối)
+    prevBtn.addEventListener("click", slidePrev);  // chuyển sang phải (cuối → đầu)
 });
+
 
 
 
