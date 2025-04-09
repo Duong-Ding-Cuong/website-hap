@@ -660,7 +660,7 @@ svg{
         "first-name last-name"
         "email phone"
         "other-contact country"
-        "company job-title"
+        "company company"
         "message message"
 }
 .form-contact-input input,
@@ -732,7 +732,6 @@ svg{
         "other-contact"
         "country"
         "company"
-        "job-title"
         "message";
     }
     .content-contact-child:first-child,
@@ -955,14 +954,15 @@ svg{
     align-items: flex-start;
 }
 .number-text-aboutchild{
-    width: 3rem;
-    height: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
     background-color: #f47a3d;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 2rem;
+    font-size: 22px;
 }
 .content-text-aboutchild{
     width: calc(95% - 5rem);
@@ -977,6 +977,7 @@ svg{
     height: 75vh;
 }
 .about-child-img img{
+    border-radius: 5px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1286,7 +1287,7 @@ background-color: #f7b56b;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .card-certifications{
     margin-top: 3em;
