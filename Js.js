@@ -100,56 +100,116 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn.addEventListener("click", slidePrev);  // chuyển sang phải (cuối → đầu)
 });
 
-
-
-
-
+// auto-slide
 document.addEventListener("DOMContentLoaded", () => {
     const techItems = document.querySelectorAll(".item-list-tech");
 
     let currentActiveItem = null;
     let currentInterval = null;
     let isSliding = false;
+    let isDragging = false;
+    let autoSlideEnabled = true;
+    let dragTimeout;
+    let startX = 0;
+    let currentX = 0;
+    let animationID = 0;
+    let lastHoveredItem = null;
+    const originalOrderMap = new Map();
 
     const stopCurrentSlide = () => {
-        if (currentInterval) {
-            clearInterval(currentInterval);
-            currentInterval = null;
-        }
-
+        if (currentInterval) clearInterval(currentInterval);
+        currentInterval = null;
         if (currentActiveItem) {
             const list = currentActiveItem.querySelector(".list-tech");
             list.style.transition = "none";
             list.style.transform = "translateX(0)";
+            currentActiveItem.classList.remove("active");
+            currentActiveItem = null;
         }
-
         isSliding = false;
     };
 
-    const startSliding = (item) => {
-        const list = item.querySelector(".list-tech");
-        const listItems = list.querySelectorAll(".list-tech-img");
+    const getTranslateX = (element) => {
+        const style = window.getComputedStyle(element);
+        const matrix = new WebKitCSSMatrix(style.transform);
+        return matrix.m41;
+    };
 
-        if (listItems.length <= 8) return;
+    const setTranslateX = (element, x) => {
+        element.style.transform = `translateX(${x}px)`;
+    };
+
+    const restoreOriginalItems = (item) => {
+        const list = item.querySelector(".list-tech");
+        const original = originalOrderMap.get(item);
+        if (!original) return;
+
+        const currentItems = Array.from(list.children);
+        const isDifferent = original.some((el, i) => el.dataset.key !== currentItems[i]?.dataset.key);
+
+        if (isDifferent) {
+            list.innerHTML = "";
+            original.forEach(child => list.appendChild(child.cloneNode(true)));
+            list.style.transition = "none";
+            setTranslateX(list, 0);
+        }
+    };
+
+    const normalizePosition = (list, items) => {
+        const itemWidth = items[0].offsetWidth + 4;
+        const currentTranslate = getTranslateX(list);
+        const movedItems = Math.round(-currentTranslate / itemWidth);
+        const newTranslate = -movedItems * itemWidth;
+
+        list.style.transition = "transform 0.3s ease-out";
+        setTranslateX(list, newTranslate);
+
+        setTimeout(() => {
+            list.style.transition = "none";
+            for (let i = 0; i < movedItems; i++) {
+                const first = list.querySelector(".list-tech-img");
+                list.appendChild(first);
+            }
+            setTranslateX(list, getTranslateX(list) + movedItems * itemWidth);
+        }, 300);
+    };
+
+    const animate = (list) => {
+        setTranslateX(list, currentX);
+        if (isDragging) {
+            animationID = requestAnimationFrame(() => animate(list));
+        }
+    };
+
+    const startAutoSlide = (item) => {
+        if (!autoSlideEnabled || isDragging || !item) return;
+
+        const list = item.querySelector(".list-tech");
+        const items = list.querySelectorAll(".list-tech-img");
+        const max = window.innerWidth <= 768 ? 2 : 8;
+
+        if (items.length <= max) {
+            stopCurrentSlide();
+            return;
+        }
 
         stopCurrentSlide();
+        currentActiveItem = item;
+        item.classList.add("active");
 
         const slide = () => {
             if (isSliding) return;
             isSliding = true;
-
-            const itemWidth = list.firstElementChild.offsetWidth + 4;
-            const firstItem = list.firstElementChild;
-            const cloned = firstItem.cloneNode(true);
-            list.appendChild(cloned);
+            const itemWidth = items[0].offsetWidth + 4;
 
             list.style.transition = "transform 0.5s ease-in-out";
-            list.style.transform = `translateX(-${itemWidth}px)`;
+            setTranslateX(list, getTranslateX(list) - itemWidth);
 
             setTimeout(() => {
                 list.style.transition = "none";
-                list.style.transform = "translateX(0)";
-                list.removeChild(firstItem);
+                const first = list.querySelector(".list-tech-img");
+                list.appendChild(first);
+                setTranslateX(list, getTranslateX(list) + itemWidth);
                 isSliding = false;
             }, 500);
         };
@@ -158,45 +218,100 @@ document.addEventListener("DOMContentLoaded", () => {
         currentInterval = setInterval(slide, 2000);
     };
 
-    techItems.forEach((item) => {
+    techItems.forEach((item, index) => {
         const list = item.querySelector(".list-tech");
-        const listItems = list.querySelectorAll(".list-tech-img");
+        const originalItems = Array.from(list.querySelectorAll(".list-tech-img"));
+
+        // Gán key để kiểm tra thứ tự sau này
+        originalItems.forEach((el, i) => el.dataset.key = `${index}-${i}`);
+        originalOrderMap.set(item, originalItems.map(el => el.cloneNode(true)));
+
+        const max = window.innerWidth <= 768 ? 2 : 8;
+
+        if (originalItems.length > max) {
+            let isPointerDown = false;
+
+            item.addEventListener("pointerdown", (e) => {
+                stopCurrentSlide();
+                isDragging = true;
+                autoSlideEnabled = false;
+                clearTimeout(dragTimeout);
+                startX = e.clientX;
+                currentX = getTranslateX(list);
+                list.style.transition = "none";
+                isPointerDown = true;
+                animationID = requestAnimationFrame(() => animate(list));
+                item.style.cursor = 'grabbing';
+            });
+
+            item.addEventListener("pointermove", (e) => {
+                if (!isPointerDown) return;
+                const delta = e.clientX - startX;
+                currentX += delta;
+                startX = e.clientX;
+            });
+
+            const endDrag = () => {
+                if (!isPointerDown) return;
+                isDragging = false;
+                isPointerDown = false;
+                cancelAnimationFrame(animationID);
+                normalizePosition(list, originalItems);
+                item.style.cursor = 'grab';
+                dragTimeout = setTimeout(() => {
+                    autoSlideEnabled = true;
+                    if (lastHoveredItem) startAutoSlide(lastHoveredItem);
+                }, 600);
+            };
+
+            item.addEventListener("pointerup", endDrag);
+            item.addEventListener("pointerleave", endDrag);
+        }
 
         item.addEventListener("mouseenter", () => {
-            const canSlide = listItems.length > 8;
-
-            if (!canSlide) return;
-
-            // Nếu item mới khác item đang active
-            if (currentActiveItem !== item) {
-                if (currentActiveItem) {
-                    currentActiveItem.classList.remove("active");
-                }
-                item.classList.add("active");
-                currentActiveItem = item;
-                startSliding(item);
+            lastHoveredItem = item;
+            const items = item.querySelectorAll(".list-tech-img");
+            const max = window.innerWidth <= 768 ? 2 : 8;
+            if (items.length > max && autoSlideEnabled) {
+                startAutoSlide(item);
+            } else {
+                stopCurrentSlide();
             }
         });
 
-        // KHÔNG dừng hiệu ứng khi rời chuột
         item.addEventListener("mouseleave", () => {
-            // Giữ active và vẫn trượt tiếp
+            setTimeout(() => {
+                // Kiểm tra nếu không hover item nào
+                if (!document.querySelector(":hover")?.closest(".item-list-tech")) {
+                    techItems.forEach(restoreOriginalItems);
+                    stopCurrentSlide();
+
+                    if (lastHoveredItem && autoSlideEnabled) {
+                        startAutoSlide(lastHoveredItem);
+                    }
+                }
+            }, 150); // Delay ngắn tránh cảm giác giật
         });
     });
 
-    // ✨ Kích hoạt mặc định phần tử đầu tiên nếu đủ điều kiện
-    requestAnimationFrame(() => {
-        const firstItem = document.querySelector(".item-list-tech");
-        if (!firstItem) return;
-
-        const listItems = firstItem.querySelectorAll(".list-tech-img");
-        if (listItems.length > 8) {
-            firstItem.classList.add("active");
-            currentActiveItem = firstItem;
-            startSliding(firstItem);
+    // Tự động chạy item đầu nếu phù hợp
+    const first = techItems[0];
+    if (first) {
+        const listItems = first.querySelectorAll(".list-tech-img");
+        const max = window.innerWidth <= 768 ? 2 : 8;
+        if (listItems.length > max) {
+            autoSlideEnabled = true;
+            startAutoSlide(first);
+            lastHoveredItem = first;
         }
-    });
+    }
 });
+
+
+
+
+
+
 
 
 
