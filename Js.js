@@ -208,21 +208,49 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// hiệu ứng chạy số đếm
+function animateCount(element, end, duration, suffix = '') {
+    let startTime = null;
+
+    function update(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const current = Math.floor(progress * end);
+        element.textContent = current + suffix;
+
+        if (progress < 1) {
+            window.requestAnimationFrame(update);
+        }
+    }
+
+    window.requestAnimationFrame(update);
+}
+
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top < window.innerHeight &&
+        rect.bottom > 0
+    );
+}
 
 
+const counters = document.querySelectorAll('.count-up');
+const animatedFlags = new WeakMap();
 
+function checkCountersInView() {
+    counters.forEach((counter) => {
+        if (!animatedFlags.get(counter) && isInViewport(counter)) {
+            const end = parseInt(counter.getAttribute('data-count')) || 0;
+            const suffix = counter.getAttribute('data-suffix') || '';
+            animateCount(counter, end, 1300, suffix);
+            animatedFlags.set(counter, true);
+        }
+    });
+}
 
-
-
-
-
-
-
-
-
-
-
-
+window.addEventListener("scroll", checkCountersInView);
+window.addEventListener("load", checkCountersInView);
 
 
 
