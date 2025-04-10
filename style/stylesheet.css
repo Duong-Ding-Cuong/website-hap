@@ -269,8 +269,8 @@ ul li{
 /*Banner*/
 .banner{
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url('/website-hap/image/banner.png') no-repeat center center/cover;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),*/
+    /*url('/website-hap/image/banner.png') no-repeat center center/cover;*/
     color: white;
     display: flex;
     flex-direction: column;
@@ -509,7 +509,7 @@ svg{
     width: 100%;
     height: 100%;
     background-position-y:0;
-    background-color: black;
+    background-color: #101010;
 }
 .why-choose-content-child-title{
     margin-bottom: 20px;
@@ -532,7 +532,6 @@ svg{
     height: 100%;
     position: relative;
     z-index: 1;
-    justify-content: space-around;
 }
 .number-card-why-choose{
     display: flex;
@@ -681,20 +680,6 @@ svg{
 .form-contact-input textarea{
     height: 17vh;
 }
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.4);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-.icon-contact-phone{
-    animation: pulse 2s ease-in-out infinite;
-}
 /*Contact us reponsive mobile and tablet*/
 @media (min-width: 768px) and (max-width: 1023.98px) {
     .contact-us{
@@ -755,7 +740,7 @@ svg{
 .team-mate{
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: #101010;
     position: relative;
     padding: 3em  10.9375em;
 }
@@ -812,6 +797,7 @@ svg{
 .slide-teammate-img img{
     width: 100%;
     height: 100%;
+    object-position: top;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -1106,6 +1092,10 @@ svg{
     will-change: transform;
     box-sizing: content-box;
 }
+.list-tech-img img{
+    width: 78px;
+    height: 28px;
+}
 .list-tech-img{
     display: flex;
     align-items: center;
@@ -1229,6 +1219,7 @@ background-color: #f7b56b;
     justify-content: center;
     align-items: center;
     margin-bottom: 0.2em;
+    text-transform: uppercase;
 }
 .text-service:first-child{
     margin-top: 3em;
@@ -1259,19 +1250,18 @@ background-color: #f7b56b;
     .text-service:nth-child(1){
         padding-right: 10px;
     }
-    .text-service:last-child{
-        padding-left: 10px;
+    .text-service{
+        margin: auto;
     }
     .text-service h1 span{
         font-weight: 800;
         font-size: 1.25rem;
     }
-    .text-service:first-child{
-        margin-top: 0;
-    }
     .text-service:last-child{
-        margin-bottom: 0;
+        margin: auto;
+        padding-left: 10px;
     }
+
 }
 /*certifications*/
 .certifications{
@@ -1325,7 +1315,7 @@ background-color: #f7b56b;
 }
 .item-card-certifications{
     padding: 1em 0.5em;
-    width: calc(33.33% - 20px);
+    width: calc(33.33% - 10px);
     background-color: #f47a3d;
     display: flex;
     flex-direction: column;

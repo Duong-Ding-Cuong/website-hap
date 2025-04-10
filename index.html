@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 </head>
 <body>
     <div class="component-nav">
@@ -87,7 +89,8 @@
         </nav>
     </div>
 <!--    banner  -->
-    <div class="banner">
+    <div id="banner-background" class="banner">
+<!--        <div id="#banner-background" style="height: 100px; width: 100px"></div>-->
         <div class="bannerChild">
             <p class="name-box txt-center line-namebox" data-aos="zoom-in-up"  data-aos-duration="2000"> HAP TECH</p>
             <h1 class="bannerItem txt-center fw-bold" data-aos="zoom-in-up"  data-aos-duration="2000">Innovative Solution <br> Empower Your Business</h1>
@@ -103,7 +106,7 @@
         <div class="container-about container">
             <div class="about-child col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                 <div class="about-child-title">
-                    <h1 class="fw-bold text-light">About <span class="text-hap me-3">Us</span></h1>
+                    <h1 class="fw-bold text-light">ABOUT <span class="text-hap me-3">US</span></h1>
                 </div>
                 <div class="about-child-text mb-3 text-light" data-aos="fade-right">
                     <div class="number-text-aboutchild fw-bold">01</div>
@@ -338,7 +341,7 @@
                                 <img src="image/app-tech/image-327.svg" alt="">
                             </div>
                             <div class="list-tech-img">
-                                <img src="image/app-tech/image-328.svg" alt="">
+                                <img src="image/app-tech/binencerpng.png" alt="">
                             </div>
                             <div class="list-tech-img">
                                 <img src="image/app-tech/image-329.svg" alt="">
@@ -468,7 +471,7 @@
     <section class="service" id="service">
         <div class="container-service container">
             <div class="title-container-service">
-                <h1 class="name-box text-hap text-center" data-aos="fade-down">Our Service</h1>
+                <h1 data-aos="fade-down" class="fw-bold text-light text-center" >OUR <span class="text-hap me-3">SERVICES</span></h1>
             </div>
             <div class="content-container-service">
                 <div class="item-container-service text-service col-6 col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6" data-aos="fade-right">
@@ -486,12 +489,26 @@
                     <img data-aos="fade-up" src="image/img1.png" alt="img service">
                 </div>
                 <div class="item-container-service text-service col-6 col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6" data-aos="fade-left" data-aos-anchor-placement="center-bottom">
-                    <h1 class="text-light fw-bold text-center "><span class="me-3">Team-based</span> <span>Hiring</span> </h1>
+                    <h1 class="text-light fw-bold text-center "><span class="me-3">Team-based</span> <br> <span>Hiring</span> </h1>
                     <p class="text-light">We provide flexible, scalable team-based hiring solutions for businesses that
                         need technical talent fast. Whether you're building an app, launching a new platform,
                         or expanding your IT department, our curated teams — from developers to DevOps —
                         integrate seamlessly with your operations to boost productivity and speed up delivery.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+<!--banner2-->
+    <section class="banner-content">
+        <div class="banner-content-child" >
+            <div class="banner-content-child-text" data-aos="fade-up"
+                 data-aos-anchor-placement="top-bottom">
+                <h3 class="text-light display-5 fw-bold txt-center">IT Solutions & Services Right At Your Fingertips</h3>
+            </div>
+            <div class="banner-content-child-button" data-aos="fade-up"
+                 data-aos-anchor-placement="top-bottom">
+                <a href="#contact-us"><button class=" btn-color-orange">DISCOVER MORE</button></a>
+
             </div>
         </div>
     </section>
@@ -501,13 +518,13 @@
             <div class="why-choose-content-child" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
                 <p class="name-box line-namebox">WHY CHOOSE US</p>
                 <div class="why-choose-content-child-title">
-                    <h5 class="title text-light">What Makes Us Different</h5>
+                    <h5 class="title text-light mb-2">What Makes Us Different</h5>
                 </div>
             </div>
             <div class="why-choose-content-child">
                 <div class="card card-why-choose" data-aos="fade-right">
                     <div class="number-card-why-choose">
-                    <h3 class="fw-bold h6">TECHNOLOGY EXPERTISE</h3>
+                    <h4 class="fw-bold ">TECHNOLOGY EXPERTISE</h4>
                         <span class="text-light">01</span>
                     </div>
                     <div class="content-card-why-choose">
@@ -517,7 +534,7 @@
                 </div>
                 <div class="card card-why-choose" data-aos="fade-up">
                     <div class="number-card-why-choose">
-                        <h3 class="fw-bold h6">TAILORED CONSULTING</h3>
+                        <h4 class="fw-bold">TAILORED CONSULTING</h4>
                         <span class="text-light">02</span>
                     </div>
                     <div class="content-card-why-choose">
@@ -528,7 +545,7 @@
                 </div>
                 <div class="card card-why-choose" data-aos="fade-up">
                     <div class="number-card-why-choose">
-                        <h3 class="fw-bold h6">BUSINESS-FIRST MINDSET</h3>
+                        <h4 class="fw-bold">BUSINESS-FIRST MINDSET</h4>
                         <span class="text-light">03</span>
                     </div>
                     <div class="content-card-why-choose">
@@ -538,7 +555,7 @@
                 </div>
                 <div class="card card-why-choose" data-aos="fade-left">
                     <div class="number-card-why-choose">
-                        <h3 class="fw-bold h6">INDUSTRY FLEXIBILITY</h3>
+                        <h4 class="fw-bold">INDUSTRY FLEXIBILITY</h4>
                         <span class="text-light">04</span>
                     </div>
                     <div class="content-card-why-choose">
@@ -594,32 +611,19 @@
             </div>
         </div>
     </section>
-<!--banner2-->
-    <section class="banner-content">
-        <div class="banner-content-child" >
-            <div class="banner-content-child-text" data-aos="fade-up"
-                 data-aos-anchor-placement="top-bottom">
-                <h3 class="text-light display-5 fw-bold txt-center">IT Solutions & Services Right At Your Fingertips</h3>
-            </div>
-            <div class="banner-content-child-button" data-aos="fade-up"
-                 data-aos-anchor-placement="top-bottom">
-                <button class=" btn-color-orange">DISCOVER MORE</button>
-            </div>
-        </div>
-    </section>
 <!--    our team-mate   -->
     <div class="team-mate">
         <div class="content-teammate">
             <div class="title-content-teammate" data-aos="fade-down"
                  data-aos-anchor-placement="top-bottom">
-                <p class="name-box txt-center line-namebox">OUR TEAM MATE</p>
+                <p class="name-box txt-center line-namebox">OUR TEAMMATE</p>
                 <h4 class="title txt-center text-light">Experts Ready to Served</h4>
             </div>
             <div class="slide-teammate" id="slide-teammate">
                 <div class="item-slide-teammate">
                     <div class="slide-teammate-title">
                         <h5 class="fw-bold">Nguyễn Triệu Phúc</h5>
-                        <p>Web Designer</p>
+                        <p>General Manager</p>
                     </div>
                     <div class="slide-teammate-img">
                         <img src="image/member/sep%20(2).jpg" alt="people">
@@ -627,26 +631,8 @@
                 </div>
                 <div class="item-slide-teammate">
                     <div class="slide-teammate-title">
-                        <h5 class="fw-bold">Nguyen van Khuê</h5>
-                        <p>Web Designer</p>
-                    </div>
-                    <div class="slide-teammate-img">
-                        <img src="image/member/Khue.jpg" alt="people">
-                    </div>
-                </div>
-                <div class="item-slide-teammate">
-                    <div class="slide-teammate-title">
-                        <h5 class="fw-bold">Nguyen van Kiên</h5>
-                        <p>Web Designer</p>
-                    </div>
-                    <div class="slide-teammate-img">
-                        <img src="image/member/kien.jpg" alt="people">
-                    </div>
-                </div>
-                <div class="item-slide-teammate">
-                    <div class="slide-teammate-title">
-                        <h5 class="fw-bold">Nguyen van Lâm</h5>
-                        <p>Web Designer</p>
+                        <h5 class="fw-bold">Phan Đình Lâm</h5>
+                        <p>Chief Technology Officer</p>
                     </div>
                     <div class="slide-teammate-img">
                         <img src="image/member/anhLam.jpg" alt="people">
@@ -654,29 +640,38 @@
                 </div>
                 <div class="item-slide-teammate">
                     <div class="slide-teammate-title">
-                        <h5 class="fw-bold">Nguyen van A</h5>
-                        <p>Web Designer</p>
+                        <h5 class="fw-bold">Phan Văn Khánh</h5>
+                        <p>Chief IT Helpdesk</p>
                     </div>
                     <div class="slide-teammate-img">
-                        <img src="image/anh-banner.jpg" alt="people">
+                        <img src="image/member/anhLam.jpg" alt="people">
                     </div>
                 </div>
                 <div class="item-slide-teammate">
                     <div class="slide-teammate-title">
-                        <h5 class="fw-bold">Nguyen van A</h5>
-                        <p>Web Designer</p>
+                        <h5 class="fw-bold">Hoàng Minh Khuê</h5>
+                        <p>Chief Advisor</p>
                     </div>
                     <div class="slide-teammate-img">
-                        <img src="image/people%201.jpg" alt="people">
+                        <img src="image/member/Khue.jpg" alt="people">
                     </div>
                 </div>
                 <div class="item-slide-teammate">
                     <div class="slide-teammate-title">
-                        <h5 class="fw-bold">Nguyen van A</h5>
-                        <p>Web Designer</p>
+                        <h5 class="fw-bold">Lê Trần Bảo Kiên</h5>
+                        <p>Chief Business Analyst</p>
                     </div>
                     <div class="slide-teammate-img">
-                        <img src="image/people2.jpg" alt="people">
+                        <img src="image/member/kien.jpg" alt="people">
+                    </div>
+                </div>
+                <div class="item-slide-teammate">
+                    <div class="slide-teammate-title">
+                        <h5 class="fw-bold">Nguyễn Gia Bảo</h5>
+                        <p>Senior Full-stack Developer</p>
+                    </div>
+                    <div class="slide-teammate-img">
+                        <img src="image/member/bao1.jpg" alt="people">
                     </div>
                 </div>
             </div>
@@ -704,7 +699,7 @@
                     </div>
                     <div class="text-contact-child">
                         <p>HAVE ANY QUESTION?</p>
-                        <a href="tel:0889136363"><span class="fw-bold">0889.136.363</span></a>
+                        <a href="tel:0854740000"><span class="fw-bold">085-474-0000</span></a>
                     </div>
                 </div>
                 <div class="item-contact-child " data-aos="fade-right" data-aos-anchor-placement="top-bottom">
@@ -722,7 +717,7 @@
                     </div>
                     <div class="text-contact-child">
                         <p>VISIT ANYTIME</p>
-                        <a href=""><span class="fw-bold">3rd Floor, DBS Building - Bhomes, No28, Lot 31 Ha Tri Service and Trading Area, Ha Dong</span></a>
+                        <a href=""><span class="fw-bold">3rd Floor, 43 Le Van Luong Street, Nhan Chinh, Thanh Xuan, Hanoi 100000, Vietnam</span></a>
                     </div>
                 </div>
             </div>
@@ -893,8 +888,8 @@
             <div class="child-foodter">
                 <span class="fw-bold">Contact</span>
                 <ul>
-                    <li>3rd Floor, DBS Building - Bhomes, No28, Lot 31 Ha Tri Service and Trading Area, Ha Dong</li>
-                    <li>0889.136.363</li>
+                    <li>3rd Floor, 43 Le Van Luong Street, Nhan Chinh, Thanh Xuan, Hanoi 100000, Vietnam</li>
+                    <li>085-474-0000</li>
                     <li>haptechcorp@gmail.com </li>
                 </ul>
             </div>
@@ -915,7 +910,7 @@
     <div class="muliples-contact">
         <div class="ffb-id-8ban0pt7 fg-text-dark" id="tool__society">
             <div class="tool__item">
-                <a href=mailto:hapteck@gmail.comn" class="tool__icon" style="background-image: url('image/icon-email-new.svg');">Email</a>
+                <a href=mailto:haptechcorp@gmail.com" class="tool__icon" style="background-image: url('image/icon-email-new.svg');">Email</a>
                 <a href="https://t.me/" class="tool__icon" style="background-image: url('image/icon-telegram-new.svg');">Telegram</a>
                 <a href="https://wa.me/" class="tool__icon" style="background-image: url('image/icon-whatsapp-new.svg');">WhatsApp</a>
             </div>
@@ -928,5 +923,21 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
+</script>
+<script>
+    console.log(VANTA.NET)
+    VANTA.NET({
+        el: "#banner-background",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 0.50,
+        scaleMobile: 1.00,
+        color: 0xff732f,
+        backgroundColor: 0x000000,
+        points: 9.00
+    })
 </script>
 </html>
