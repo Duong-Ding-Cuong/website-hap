@@ -103,105 +103,60 @@ document.addEventListener("DOMContentLoaded", () => {
 // auto-slide
 document.addEventListener("DOMContentLoaded", () => {
     const techItems = document.querySelectorAll(".item-list-tech");
+    const max = window.innerWidth <= 768 ? 2 : 8;
 
-    let currentActiveItem = null;
     let currentInterval = null;
+    let currentItem = null;
     let isSliding = false;
-    let isDragging = false;
-    let autoSlideEnabled = true;
-    let dragTimeout;
-    let startX = 0;
-    let currentX = 0;
-    let animationID = 0;
-    let lastHoveredItem = null;
-    const originalOrderMap = new Map();
+    let isHovering = false;
 
-    const stopCurrentSlide = () => {
-        if (currentInterval) clearInterval(currentInterval);
-        currentInterval = null;
-        if (currentActiveItem) {
-            const list = currentActiveItem.querySelector(".list-tech");
-            list.style.transition = "none";
-            list.style.transform = "translateX(0)";
-            currentActiveItem.classList.remove("active");
-            currentActiveItem = null;
-        }
-        isSliding = false;
-    };
-
-    const getTranslateX = (element) => {
-        const style = window.getComputedStyle(element);
+    const getTranslateX = (el) => {
+        const style = window.getComputedStyle(el);
         const matrix = new WebKitCSSMatrix(style.transform);
         return matrix.m41;
     };
 
-    const setTranslateX = (element, x) => {
-        element.style.transform = `translateX(${x}px)`;
+    const setTranslateX = (el, x) => {
+        el.style.transform = `translateX(${x}px)`;
     };
 
-    const restoreOriginalItems = (item) => {
-        const list = item.querySelector(".list-tech");
-        const original = originalOrderMap.get(item);
-        if (!original) return;
+    const resetTransform = (el) => {
+        el.style.transition = "none";
+        el.style.transform = "translateX(0) !important";
+    };
 
-        const currentItems = Array.from(list.children);
-        const isDifferent = original.some((el, i) => el.dataset.key !== currentItems[i]?.dataset.key);
+    const stopSlide = () => {
+        if (currentInterval) clearInterval(currentInterval);
+        currentInterval = null;
 
-        if (isDifferent) {
-            list.innerHTML = "";
-            original.forEach(child => list.appendChild(child.cloneNode(true)));
-            list.style.transition = "none";
-            setTranslateX(list, 0);
+        if (currentItem) {
+            const list = currentItem.querySelector(".list-tech");
+            resetTransform(list);
+            currentItem.classList.remove("active");
         }
+
+        currentItem = null;
+        isSliding = false;
     };
 
-    const normalizePosition = (list, items) => {
-        const itemWidth = items[0].offsetWidth + 4;
-        const currentTranslate = getTranslateX(list);
-        const movedItems = Math.round(-currentTranslate / itemWidth);
-        const newTranslate = -movedItems * itemWidth;
-
-        list.style.transition = "transform 0.3s ease-out";
-        setTranslateX(list, newTranslate);
-
-        setTimeout(() => {
-            list.style.transition = "none";
-            for (let i = 0; i < movedItems; i++) {
-                const first = list.querySelector(".list-tech-img");
-                list.appendChild(first);
-            }
-            setTranslateX(list, getTranslateX(list) + movedItems * itemWidth);
-        }, 300);
-    };
-
-    const animate = (list) => {
-        setTranslateX(list, currentX);
-        if (isDragging) {
-            animationID = requestAnimationFrame(() => animate(list));
-        }
-    };
-
-    const startAutoSlide = (item) => {
-        if (!autoSlideEnabled || isDragging || !item) return;
-
+    const startSlide = (item) => {
         const list = item.querySelector(".list-tech");
         const items = list.querySelectorAll(".list-tech-img");
-        const max = window.innerWidth <= 768 ? 2 : 8;
 
         if (items.length <= max) {
-            stopCurrentSlide();
+            stopSlide();
             return;
         }
 
-        stopCurrentSlide();
-        currentActiveItem = item;
-        item.classList.add("active");
+        stopSlide();
+        currentItem = item;
+        currentItem.classList.add("active");
 
         const slide = () => {
             if (isSliding) return;
             isSliding = true;
-            const itemWidth = items[0].offsetWidth + 4;
 
+            const itemWidth = items[0].offsetWidth + 4;
             list.style.transition = "transform 0.5s ease-in-out";
             setTranslateX(list, getTranslateX(list) - itemWidth);
 
@@ -218,94 +173,47 @@ document.addEventListener("DOMContentLoaded", () => {
         currentInterval = setInterval(slide, 2000);
     };
 
-    techItems.forEach((item, index) => {
-        const list = item.querySelector(".list-tech");
-        const originalItems = Array.from(list.querySelectorAll(".list-tech-img"));
-
-        // Gán key để kiểm tra thứ tự sau này
-        originalItems.forEach((el, i) => el.dataset.key = `${index}-${i}`);
-        originalOrderMap.set(item, originalItems.map(el => el.cloneNode(true)));
-
-        const max = window.innerWidth <= 768 ? 2 : 8;
-
-        if (originalItems.length > max) {
-            let isPointerDown = false;
-
-            item.addEventListener("pointerdown", (e) => {
-                stopCurrentSlide();
-                isDragging = true;
-                autoSlideEnabled = false;
-                clearTimeout(dragTimeout);
-                startX = e.clientX;
-                currentX = getTranslateX(list);
-                list.style.transition = "none";
-                isPointerDown = true;
-                animationID = requestAnimationFrame(() => animate(list));
-                item.style.cursor = 'grabbing';
-            });
-
-            item.addEventListener("pointermove", (e) => {
-                if (!isPointerDown) return;
-                const delta = e.clientX - startX;
-                currentX += delta;
-                startX = e.clientX;
-            });
-
-            const endDrag = () => {
-                if (!isPointerDown) return;
-                isDragging = false;
-                isPointerDown = false;
-                cancelAnimationFrame(animationID);
-                normalizePosition(list, originalItems);
-                item.style.cursor = 'grab';
-                dragTimeout = setTimeout(() => {
-                    autoSlideEnabled = true;
-                    if (lastHoveredItem) startAutoSlide(lastHoveredItem);
-                }, 600);
-            };
-
-            item.addEventListener("pointerup", endDrag);
-            item.addEventListener("pointerleave", endDrag);
-        }
-
+    // Hover event listeners
+    techItems.forEach((item) => {
         item.addEventListener("mouseenter", () => {
-            lastHoveredItem = item;
-            const items = item.querySelectorAll(".list-tech-img");
-            const max = window.innerWidth <= 768 ? 2 : 8;
-            if (items.length > max && autoSlideEnabled) {
-                startAutoSlide(item);
-            } else {
-                stopCurrentSlide();
-            }
+            isHovering = true;
+            startSlide(item);
         });
 
         item.addEventListener("mouseleave", () => {
-            setTimeout(() => {
-                // Kiểm tra nếu không hover item nào
-                if (!document.querySelector(":hover")?.closest(".item-list-tech")) {
-                    techItems.forEach(restoreOriginalItems);
-                    stopCurrentSlide();
+            isHovering = false;
 
-                    if (lastHoveredItem && autoSlideEnabled) {
-                        startAutoSlide(lastHoveredItem);
-                    }
+            setTimeout(() => {
+                // Nếu không còn hover vào bất kỳ phần tử nào thì reset
+                const isAnyHovered = [...techItems].some(el => el.matches(":hover"));
+                if (!isAnyHovered) {
+                    stopSlide();
+                    // Khởi động lại auto-slide phần tử đầu tiên sau 300ms
+                    setTimeout(() => {
+                        if (!isHovering) startSlide(techItems[0]);
+                    }, 300);
                 }
-            }, 150); // Delay ngắn tránh cảm giác giật
+            }, 100);
         });
     });
 
-    // Tự động chạy item đầu nếu phù hợp
-    const first = techItems[0];
-    if (first) {
-        const listItems = first.querySelectorAll(".list-tech-img");
-        const max = window.innerWidth <= 768 ? 2 : 8;
-        if (listItems.length > max) {
-            autoSlideEnabled = true;
-            startAutoSlide(first);
-            lastHoveredItem = first;
+    // Auto start default on first element
+    if (techItems.length > 0) {
+        const first = techItems[0];
+        const items = first.querySelectorAll(".list-tech-img");
+        if (items.length > max) {
+            startSlide(first);
         }
     }
 });
+
+
+
+
+
+
+
+
 
 
 
