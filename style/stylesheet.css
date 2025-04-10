@@ -788,7 +788,6 @@ svg{
     background-color: #602e1b;
     padding: 1em 15px 0;
     width: calc(25% - 30px);
-    height: 250px;
     margin-bottom: 60px;
     position: relative;
     z-index: 1;
@@ -796,6 +795,7 @@ svg{
     border-radius: 10px;
     color: white;
     transition: transform 0.5s ease;
+    height: 40vh;
 }
 .item-slide-teammate h5{
     font-size:1.3rem;
