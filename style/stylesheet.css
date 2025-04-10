@@ -284,19 +284,25 @@ ul li{
     margin: 35px 0;
 }
 @media (max-width: 1023px) {
+
     .banner{
         height: 27.375em;
         padding-top: 55px;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('/website-hap/image/banner.png') no-repeat center center/cover;
     }
     .bannerChild{
         padding: 1.5em;
     }
     .bannerChild h1{
-        font-size: 40px;
+        font-size: 31px;
         margin: 20px 0;
     }
     .bannerItem:last-child{
         font-size: 1em;
+    }
+    .vanta-canvas{
+        display: none !important;
     }
 }
 /**/
@@ -1385,8 +1391,4 @@ background-color: #f7b56b;
     .item-card-certifications span:first-of-type{
         font-size: 23px;
     }
-}
-/**/
-#countUp {
-    transition: all 0.3s ease;
 }
