@@ -766,7 +766,7 @@ svg{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 80px;
 }
 .btn-teammate-prev,
 .btn-teammate-next {
@@ -783,6 +783,7 @@ svg{
     gap: 30px;
     transition: transform 0.5s ease-in-out;
     will-change: transform;
+    transform: translateX(15px);
 }
 .item-slide-teammate{
     background-color: #602e1b;
@@ -805,10 +806,10 @@ svg{
 }
 .slide-teammate-img img{
     width: 100%;
-    height: 100%;
     object-position: top;
     object-fit: cover;
     border-radius: 10px;
+    height: 100%;
 }
 .item-slide-teammate:before{
     content: "";
@@ -837,6 +838,7 @@ svg{
     }
     .slide-teammate{
         width: 100%;
+        padding-bottom: 12vh;
     }
     .item-slide-teammate{
         width: calc(50% - 14px);
@@ -856,16 +858,13 @@ svg{
     .item-slide-teammate{
         width: 100%;
     }
-    .slide-teammate-img{
-        height: 130%;
-    }
     .buttons-teammate{
-        margin-top: 100px;
-        gap: 100px;
+        margin-top: 4vh;
+        gap: 85px;
     }
     .buttons-teammate img {
-        width: 30px;
-        height: 30px;
+        width: 45px;
+        height: 45px;
     }
     .content-teammate {
         padding: 0 15px;
