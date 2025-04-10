@@ -494,7 +494,7 @@ svg{
     .containerChild-Foodter{
         display: grid;
         grid-template-columns:1fr;
-        grid-template-rows:0.5fr 0.5fr 0.5fr 1fr;
+        grid-template-rows:0.5fr 0.5fr 0.5fr;
         padding: 1.375em 15px;
         height: 100%;
         gap: 15px;
@@ -508,6 +508,9 @@ svg{
     .item-child-foodter img{
         height: 100%;
         width: 100%;
+    }
+    .child-foodter:last-child{
+        display: none;
     }
 }
 /*Why choose us*/
