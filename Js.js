@@ -303,19 +303,19 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         .then(data => {
             const status = document.getElementById('formStatus');
             if (data.ok) {
-                status.innerText = '✅ Gửi thành công!';
+                status.innerText = '✅ Submit Complete!';
                 status.style.color = 'green';
                 document.getElementById('contactForm').reset();
                 grecaptcha.reset(); // Reset CAPTCHA sau khi gửi
             } else {
-                status.innerText = '❌ Gửi thất bại!';
+                status.innerText = '❌ Submit Failed!';
                 status.style.color = 'red';
             }
         })
         .catch(error => {
             console.error(error);
             const status = document.getElementById('formStatus');
-            status.innerText = '⚠️ Có lỗi khi gửi!';
+            status.innerText = '⚠️ Error Submit!';
             status.style.color = 'orange';
         });
 });
