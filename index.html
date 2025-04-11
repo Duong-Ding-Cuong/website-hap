@@ -849,7 +849,8 @@
                             <textarea  cols="40" rows="10" type="text" aria-required="true" aria-invalid="false" placeholder="How can we help you?*" name="message" id="message"></textarea>
                         </label>
                     </div>
-                    <div class="btn-submit-contact mt-4">
+                    <div class="btn-submit-contact mt-1">
+                        <div class="g-recaptcha mb-1" data-sitekey="6LfiyhQrAAAAAN6g2XqjjnayOqyI-z3FfiaXvyj-"></div>
                         <button class="btn-color-orange" type="submit">Submit</button>
                     </div>
                     <div id="formStatus" style="margin-top:10px; font-weight:bold;"></div>
@@ -939,4 +940,7 @@
         points: 9.00
     })
 </script>
+<!-- Gọi script reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </html>
