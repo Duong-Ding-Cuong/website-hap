@@ -252,6 +252,58 @@ function checkCountersInView() {
 window.addEventListener("scroll", checkCountersInView);
 window.addEventListener("load", checkCountersInView);
 
+//
 
+    const BOT_TOKEN = '7871114460:AAHOqDvtPrZ-15nRe1n_sCgZi8v0SX-ji5M'; // Thay bằng token thực tế của bạn
+    const CHAT_ID = '-4638397308'; // Thay bằng chat ID thực tế
+
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const firstName = document.getElementById('first-name').value.trim();
+    const lastName = document.getElementById('last-name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone-number').value.trim();
+    const otherContact = document.getElementById('other-contact').value.trim();
+    const countrySelect = document.querySelector('.country_auto');
+    const country = countrySelect.options[countrySelect.selectedIndex].value;
+
+    const text = `
+📩 <b>Liên hệ mới</b>
+👤 Họ tên: <b>${firstName} ${lastName}</b>
+📧 Email: <b>${email}</b>
+📱 SĐT: <b>${phone || 'Không cung cấp'}</b>
+🔗 Liên hệ khác: <b>${otherContact || 'Không cung cấp'}</b>
+🌍 Quốc gia: <b>${country}</b>
+  `;
+
+    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+    chat_id: CHAT_ID,
+    text: text,
+    parse_mode: 'HTML'
+})
+})
+    .then(response => response.json())
+    .then(data => {
+    const status = document.getElementById('formStatus');
+    if (data.ok) {
+    status.innerText = '✅ Gửi thành công!';
+    status.style.color = 'green';
+    document.getElementById('contactForm').reset();
+} else {
+    status.innerText = '❌ Gửi thất bại!';
+    status.style.color = 'red';
+}
+})
+    .catch(error => {
+    console.error(error);
+    const status = document.getElementById('formStatus');
+    status.innerText = '⚠️ Có lỗi khi gửi!';
+    status.style.color = 'orange';
+});
+});
 
 
