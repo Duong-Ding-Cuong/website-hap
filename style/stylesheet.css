@@ -1343,7 +1343,7 @@ background-color: #f7b56b;
     height: 100%;
     border-radius: 5px;
 }
-.certifications-img img:not(:first-child, :nth-child(2)){
+.certifications-img img:not(:first-child,:nth-child(2)){
      object-fit: cover;
  }
 .card-certifications{
