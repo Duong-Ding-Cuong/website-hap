@@ -449,15 +449,43 @@ svg{
     margin: 10px 0;
     color: white;
 }
-.item-child-foodter{
+.item-child-foodter {
     display: grid;
-    grid-template-rows: 70px 70px;
-    grid-template-columns: 70px 70px 70px;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
     gap: 10px;
-}
-.item-child-foodter img{
-    height: 100%;
     width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+.img-Gallery {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-image: url('/website-hap/image/Screenshot 2025-04-10 124751.png');
+    background-repeat: no-repeat;
+    background-size: 300% 200%; /* vì ảnh chia 3 cột x 2 hàng */
+    background-position: center;
+    display: block;
+}
+
+/* Crop đúng từng vùng */
+.img-Gallery-1 { background-position: 0% 0%; }
+.img-Gallery-2 { background-position: 50% 0%; }
+.img-Gallery-3 { background-position: 100% 0%; }
+.img-Gallery-4 { background-position: 0% 100%; }
+.img-Gallery-5 { background-position: 50% 100%; }
+.img-Gallery-6 { background-position: 100% 100%; }
+
+/* Responsive cho các thiết bị cụ thể */
+@media (min-width: 768px) {
+    .item-child-foodter {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .item-child-foodter {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /*reponsive footer mobile and tablet*/
@@ -498,16 +526,6 @@ svg{
         padding: 1.375em 15px;
         height: 100%;
         gap: 15px;
-    }
-    .item-child-foodter{
-        display: grid;
-        grid-template-rows:  24vw  24vw;
-        grid-template-columns:  24vw  24vw  24vw;
-        gap: 10px;
-    }
-    .item-child-foodter img{
-        height: 100%;
-        width: 100%;
     }
     .child-foodter:last-child{
         display: none;
@@ -1079,7 +1097,6 @@ svg{
         bottom: 90px;
         right: 14px;
         z-index: 100;
-        padding: 15px;
         font-size: 15px;
     }
 }
