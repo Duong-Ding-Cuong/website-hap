@@ -320,4 +320,17 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         });
 });
 
+// Hiện nút khi scroll xuống
+window.onscroll = function () {
+    const btn = document.getElementById("scrollToTopBtn");
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
+    }
+};
 
+// Scroll lên đầu khi click
+document.getElementById("scrollToTopBtn").addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});

@@ -608,6 +608,9 @@ svg{
     .why-choose-content-child{
         padding: 0 10px;
     }
+    .content-card-why-choose img{
+        width: 25%;
+    }
 }
 /*contact us*/
 .contact-us{
@@ -744,6 +747,9 @@ svg{
     .text-contact-child a{
         font-size: 12px;
     }
+    .form-contact-input input, .form-contact-input select, .form-contact-input textarea{
+        font-size: 14px;
+    }
 }
 /*our team mate*/
 .team-mate{
@@ -861,6 +867,7 @@ svg{
     }
     .item-slide-teammate{
         width: 100%;
+        height: 50vh;
     }
     .buttons-teammate{
         margin-top: 4vh;
@@ -1042,7 +1049,30 @@ svg{
     text-decoration: none;
     transform: translateX(-100%);
 }
-/*   TECH STACK   */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 120px;
+    right: 24px;
+    z-index: 100;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f47a3d;
+    color: white;
+    cursor: pointer;
+    display: none; /* Ẩn ban đầu */
+    transition: opacity 0.3s ease;
+}
+#scrollToTopBtn:hover {
+    background-color: #e1e1e1;
+}
+#scrollToTopBtn img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+    /*   TECH STACK   */
 .support-tech{
     width: 100%;
     height: 100%;
