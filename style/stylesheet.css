@@ -819,6 +819,10 @@ svg{
 }
 .item-slide-teammate h5{
     font-size:1.3rem;
+    white-space: nowrap;
+}
+.slide-teammate-title p{
+    white-space: nowrap;
 }
 .slide-teammate-img{
     height: 100%;
@@ -860,7 +864,6 @@ svg{
     }
     .slide-teammate{
         width: 100%;
-        padding-bottom: 12vh;
     }
     .item-slide-teammate{
         width: calc(50% - 14px);
@@ -1396,7 +1399,7 @@ background-color: #f7b56b;
     height: 100%;
     border-radius: 5px;
 }
-.certifications-img img:not(:first-child,:nth-child(2)){
+.certifications-img img{
      object-fit: cover;
  }
 .card-certifications{
