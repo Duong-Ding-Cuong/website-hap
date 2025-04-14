@@ -466,22 +466,17 @@ svg{
     background-position: center;
     display: block;
 }
-
-/* Crop đúng từng vùng */
-.img-Gallery-1 { background-position: 0% 0%; }
-.img-Gallery-2 { background-position: 50% 0%; }
-.img-Gallery-3 { background-position: 100% 0%; }
-.img-Gallery-4 { background-position: 0% 100%; }
+.img-Gallery-1 { background-position: 0 0; }
+.img-Gallery-2 { background-position: 50% 0; }
+.img-Gallery-3 { background-position: 100% 0; }
+.img-Gallery-4 { background-position: 0 100%; }
 .img-Gallery-5 { background-position: 50% 100%; }
 .img-Gallery-6 { background-position: 100% 100%; }
-
-/* Responsive cho các thiết bị cụ thể */
 @media (min-width: 768px) {
     .item-child-foodter {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
 @media (min-width: 1024px) {
     .item-child-foodter {
         grid-template-columns: repeat(3, 1fr);
