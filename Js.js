@@ -323,7 +323,7 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 // Hiện nút khi scroll xuống
 window.onscroll = function () {
     const btn = document.getElementById("scrollToTopBtn");
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
         btn.style.display = "block";
     } else {
         btn.style.display = "none";

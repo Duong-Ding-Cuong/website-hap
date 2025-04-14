@@ -1072,6 +1072,16 @@ svg{
     height: 25px;
     border-radius: 50%;
 }
+@media (max-width: 767.98px) {
+    #scrollToTopBtn {
+        position: fixed;
+        bottom: 90px;
+        right: 14px;
+        z-index: 100;
+        padding: 15px;
+        font-size: 15px;
+    }
+}
     /*   TECH STACK   */
 .support-tech{
     width: 100%;
