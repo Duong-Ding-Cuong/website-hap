@@ -402,7 +402,7 @@ ul li{
     display: grid;
     grid-template-columns:1.5fr 1fr 1fr 1.5fr;
     gap: 30px;
-    height: 15.75em;
+    height: 100%;
 }
 .icon-logo ul{
     display: flex;
