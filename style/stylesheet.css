@@ -460,7 +460,7 @@ svg{
 .img-Gallery {
     width: 100%;
     aspect-ratio: 1 / 1;
-    background-image: url('/website-hap/image/Screenshot 2025-04-10 124751.png');
+    background-image: url('/website-hap/image/img-gallery-footer.png');
     background-repeat: no-repeat;
     background-size: 300% 200%; /* vì ảnh chia 3 cột x 2 hàng */
     background-position: center;
@@ -1005,7 +1005,7 @@ svg{
 }
 .about-child-img{
     width: 100%;
-    height: 70vh;
+    height: 75vh;
 }
 .about-child-img img{
     border-radius: 5px;
