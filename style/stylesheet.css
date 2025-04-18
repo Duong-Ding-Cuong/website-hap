@@ -208,42 +208,8 @@ ul li{
 
 }
 /*choose language start*/
-.show{
-    display: block !important;
-}
 .choose-language{
     color: white;
-}
-.choose-language ul{
-    display: none;
-    position: absolute;
-    top:75px;
-    right: 30px;
-    background-color: darkgray;
-    padding-left: 0;
-    border-radius: .25rem;
- }
-.choose-language li{
-    display: block;
-    padding: .75rem 2.5rem .75rem 1rem;
-    border-bottom: 1px solid white;
-}
-.choose-language li:last-child{
-    border-bottom: none;
-}
-.choose-language li:hover{
-    background-color: #f47a3d;
-    color: white;
-}
-.choose-language li:nth-child(1):hover{
-    border-radius:.25rem .25rem  0 0;
-}
-.choose-language li:last-child:hover{
-    border-radius: 0 0 .25rem .25rem ;
-}
-.choose-language li:nth-child(1):hover,
-.choose-language li:last-child:hover{
-
 }
 .choose-language a{
     position: relative;
@@ -259,12 +225,6 @@ ul li{
 .navChild:nth-child(3) img{
     width: 35px;
     height: 35px;
-}
-/*responsive choose language cho mobile*/
-@media (max-width:767.98px) {
-    .choose-language ul{
-        top:56px;
-    }
 }
 /*Banner*/
 .banner{
@@ -884,7 +844,7 @@ svg{
     }
     .item-slide-teammate{
         width: 100%;
-        height: 50vh;
+        height: 40vh;
     }
     .buttons-teammate{
         margin-top: 4vh;
@@ -1219,7 +1179,6 @@ background-color: #f7b56b;
     padding: 0.5rem;
     background-color: white;
 }
-
 /*tablet*/
 @media (max-width: 1023.98px) {
     .item-list-tech{

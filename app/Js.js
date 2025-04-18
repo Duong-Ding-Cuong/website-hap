@@ -1,7 +1,3 @@
-const change = document.getElementById("language");
-function  changeLanguage() {
-    change.classList.toggle("show");
-}
 // hiệu ứng nav ẩn/hiện khi scroll
 const navbar = document.getElementById('navbar');
 let lastScrollTop = 0;
