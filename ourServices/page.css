@@ -1,0 +1,151 @@
+/* General Reset (optional) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body: ensure it fills the browser window height */
+  html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+ 
+  
+  /* Main section styling */
+  .services-section {
+    position: relative;
+    min-height: 100%;
+    background: radial-gradient(circle at bottom right, #1a1a1a 30%, #000 100%);
+    overflow: hidden; /* hides the wave corners if they extend off the page */
+    padding: 40px 20px;
+  }
+  
+  /* Waves in corners (placeholder) */
+  .wave {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: url('https://via.placeholder.com/300x300/ff6600/ffffff?text=Wave') no-repeat center/contain;
+    opacity: 0.3;
+  }
+  .wave-top-left {
+    top: 0;
+    left: 0;
+  }
+  .wave-bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+  }
+  
+  /* Heading area */
+  .services-heading {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  .services-heading h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .services-heading h1 span {
+    color: #ff6600;
+  }
+  .services-heading hr {
+    margin: 15px auto 0;
+    width: 80px;
+    border: none;
+    border-top: 2px solid #666;
+  }
+  
+  /* Three-column layout */
+  .services-content {
+    display: flex;
+    flex-wrap: wrap;       /* allow stacking on small screens */
+    max-width: 1200px;    /* optional max width */
+    margin: 0 auto;       /* center horizontally */
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Columns share some basic styling */
+  .column {
+    color: #fff;
+    flex: 1 1 250px; /* each column can grow, but won't shrink below 250px */
+    max-width: 400px;
+  }
+  
+  /* Left and right columns text */
+  .column h2 {
+    
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+
+    
+  }
+  .column p {
+    line-height: 1.6;
+    font-size: 1.8rem;
+  }
+  
+  /* Center column: tilted image container */
+  .column-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+
+  .top-line {
+    border-top: 2px solid #ffffff;
+    margin: 20px auto;
+    width: 70%;
+    height: 0;
+  }
+
+  .column-left {
+    text-align: justify;
+    text-justify: inter-word;
+
+    position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+    left: -50px;
+
+  }
+
+  .column-right {
+    text-align: justify;
+    text-justify: inter-word;
+
+    position: relative; /* has to be position relative for left to work, or you could just do margin-left: -50px; too */
+    right: -50px;
+
+    bottom: -100px;
+  }
+
+/* TEST
+  img {
+    height: 800px;
+  }
+*/
+  .left-title {
+    text-align: center;
+  }
+
+  .right-title {
+    text-align: center;
+  }
+
+  .hexagon {
+    clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+  }
+
+  .image-center {
+    width: 30vw;
+    height: 40vw;
+  }
+
