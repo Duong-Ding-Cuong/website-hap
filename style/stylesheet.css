@@ -295,6 +295,7 @@ ul li{
         padding: 1.5em;
     }
     .bannerChild h1{
+        padding: 0;
         font-size: 31px;
         margin: 20px 0;
     }
@@ -1114,7 +1115,11 @@ svg{
     margin-right: auto;
 }
 .support-child-title{
+    width: 80%;
     margin-bottom: 2em;
+}
+.support-child-content-title{
+    width: 55%;
 }
 .item-list-tech{
     display: grid;

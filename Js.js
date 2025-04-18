@@ -2,7 +2,7 @@ const change = document.getElementById("language");
 function  changeLanguage() {
     change.classList.toggle("show");
 }
-// hiệu ứng nav ẩn/hiện
+// hiệu ứng nav ẩn/hiện khi scroll
 const navbar = document.getElementById('navbar');
 let lastScrollTop = 0;
 window.addEventListener('scroll', () => {
@@ -16,7 +16,7 @@ window.addEventListener('scroll', () => {
     }
     lastScrollTop = scrollTop;
 });
-
+// menu mobile
 const showNav = document.getElementById("nav-mobile");
 function  showNavmobile() {
     showNav.classList.toggle("show_navmobile");
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     prevBtn.addEventListener("click", slidePrev);  // chuyển sang phải (cuối → đầu)
 });
 
-// auto-slide
+// auto-slide cho tech-stack
 document.addEventListener("DOMContentLoaded", () => {
     const techItems = document.querySelectorAll(".item-list-tech");
     const max = window.innerWidth <= 768 ? 2 : 8;
@@ -252,21 +252,18 @@ function checkCountersInView() {
 window.addEventListener("scroll", checkCountersInView);
 window.addEventListener("load", checkCountersInView);
 
-//
-
+//Gửi dữ liệu người dùng nhập vào form contact-us
 const BOT_TOKEN = '7871114460:AAHOqDvtPrZ-15nRe1n_sCgZi8v0SX-ji5M'; // Token bot
 const CHAT_ID = '-4638397308'; // Chat ID Telegram
 
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
-
     // Lấy token CAPTCHA v2
     const captchaResponse = grecaptcha.getResponse();
     if (!captchaResponse) {
         alert("Vui lòng xác nhận bạn không phải người máy!");
         return;
     }
-
     // Lấy dữ liệu từ form
     const firstName = document.getElementById('first-name').value.trim();
     const lastName = document.getElementById('last-name').value.trim();
@@ -275,10 +272,8 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     const otherContact = document.getElementById('other-contact').value.trim();
     const company = document.getElementById('company').value.trim();
     const message = document.getElementById('message').value.trim();
-
     const countrySelect = document.querySelector('.country_auto');
     const country = countrySelect.options[countrySelect.selectedIndex].value;
-
     const text = `
 📩 <b>Liên hệ mới</b>
 👤 Họ tên: <b>${firstName} ${lastName}</b>
@@ -323,16 +318,14 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 // Hiện nút khi scroll xuống
 window.onscroll = function () {
     const btn = document.getElementById("scrollToTopBtn");
-    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
         btn.style.display = "block";
     } else {
         btn.style.display = "none";
     }
 };
-
-// Scroll lên đầu khi click
+// Scroll lên đầu khi click vào button
 document.getElementById("scrollToTopBtn").addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
 
