@@ -229,8 +229,6 @@ ul li{
 /*Banner*/
 .banner{
     height: 100vh;
-    /*background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),*/
-    /*url('/website-hap/image/banner.png') no-repeat center center/cover;*/
     color: white;
     display: flex;
     flex-direction: column;
@@ -249,7 +247,7 @@ ul li{
         height: 27.375em;
         padding-top: 55px;
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url('/website-hap/image/banner.png') no-repeat center center/cover;
+        url('../image/banner.png') no-repeat center center/cover;
     }
     .bannerChild{
         padding: 1.5em;
@@ -421,7 +419,7 @@ svg{
 .img-Gallery {
     width: 100%;
     aspect-ratio: 1 / 1;
-    background-image: url('/website-hap/image/img-gallery-footer.png');
+    background-image: url('../image/img-gallery-footer.png');
     background-repeat: no-repeat;
     background-size: 300% 200%; /* vì ảnh chia 3 cột x 2 hàng */
     background-position: center;
@@ -864,7 +862,7 @@ svg{
     width: 100%;
     height: 75vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(/website-hap/image/backgroungbanner2.png) no-repeat center center / cover;
+    url(../image/backgroungbanner2.png) no-repeat center center / cover;
     padding: 3em;
 }
 .banner-content-child{
@@ -1218,7 +1216,7 @@ background-color: #f7b56b;
 }
 /*    service    */
 .service{
-    background: url("/website-hap/image/background-service.png") no-repeat center center/cover;
+    background: url("../image/background-service.png") no-repeat center center/cover;
     width: 100%;
     height: 100%;
     padding: 65px 0;
